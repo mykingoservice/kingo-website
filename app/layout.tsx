@@ -27,7 +27,6 @@ const serviceLinks = [
   { href: "/services/hvac-maintenance", label: "HVAC Maintenance" },
   { href: "/services/heating-repair", label: "Heating Repair" },
   { href: "/services/commercial-hvac", label: "Commercial HVAC" },
-  { href: "/services/duct-cleaning", label: "Duct Cleaning" },
 ];
 
 const areaLinks = [
