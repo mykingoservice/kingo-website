@@ -31,11 +31,15 @@ const serviceLinks = [
 
 const areaLinks = [
   { href: "/service-area/houston", label: "Houston" },
-  { href: "/service-area/spring", label: "Spring" },
-  { href: "/service-area/the-woodlands", label: "The Woodlands" },
+  { href: "/service-area/splendora", label: "Splendora" },
+  { href: "/service-area/montgomery", label: "Montgomery" },
   { href: "/service-area/conroe", label: "Conroe" },
-  { href: "/service-area/cypress", label: "Cypress" },
+  { href: "/service-area/the-woodlands", label: "The Woodlands" },
+  { href: "/service-area/spring", label: "Spring" },
   { href: "/service-area/katy", label: "Katy" },
+  { href: "/service-area/sugar-land", label: "Sugar Land" },
+  { href: "/service-area/cypress", label: "Cypress" },
+  { href: "/service-area/humble", label: "Humble" },
 ];
 
 export default function RootLayout({
@@ -138,6 +142,11 @@ export default function RootLayout({
               </p>
             </div>
           </footer>
+
+          <div className="mobile-cta-bar" aria-label="Service actions">
+            <Link href="/contact">Call Now</Link>
+            <Link href="/contact">Request Service</Link>
+          </div>
         </div>
       </body>
     </html>
