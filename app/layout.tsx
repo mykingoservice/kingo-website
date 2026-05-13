@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BOOKING_URL, PHONE_HREF } from "./cta-links";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -58,7 +59,7 @@ export default function RootLayout({
           <header className="site-header">
             <div className="top-bar">
               <p>Greater Houston HVAC service</p>
-              <Link href="/emergency-hvac">Emergency HVAC</Link>
+              <a href={PHONE_HREF}>Emergency HVAC</a>
             </div>
 
             <div className="nav-wrap">
@@ -80,9 +81,9 @@ export default function RootLayout({
                 ))}
               </nav>
 
-              <Link className="header-cta" href="/contact">
+              <a className="header-cta" href={BOOKING_URL}>
                 Schedule Service
-              </Link>
+              </a>
             </div>
           </header>
 
@@ -127,12 +128,12 @@ export default function RootLayout({
 
             <div className="footer-actions">
               <h2>Need Service?</h2>
-              <Link className="footer-cta" href="/contact">
+              <a className="footer-cta" href={PHONE_HREF}>
                 Contact Kingo
-              </Link>
-              <Link className="footer-secondary" href="/emergency-hvac">
+              </a>
+              <a className="footer-secondary" href={PHONE_HREF}>
                 Emergency HVAC
-              </Link>
+              </a>
             </div>
 
             <div className="footer-bottom">
@@ -144,8 +145,8 @@ export default function RootLayout({
           </footer>
 
           <div className="mobile-cta-bar" aria-label="Service actions">
-            <Link href="/contact">Call Now</Link>
-            <Link href="/contact">Request Service</Link>
+            <a href={PHONE_HREF}>Call Now</a>
+            <a href={BOOKING_URL}>Schedule</a>
           </div>
         </div>
       </body>

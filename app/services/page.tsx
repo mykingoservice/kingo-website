@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BOOKING_URL, PHONE_HREF } from "../cta-links";
 
 const services = [
   {
@@ -56,12 +57,12 @@ export default function Page() {
             recommendations, and next steps can be confirmed during scheduling.
           </p>
           <div className="hero-actions">
-            <Link className="home-button home-button-primary" href="/contact">
+            <a className="home-button home-button-primary" href={PHONE_HREF}>
               Call Now
-            </Link>
-            <Link className="home-button home-button-secondary" href="/contact">
+            </a>
+            <a className="home-button home-button-secondary" href={BOOKING_URL}>
               Request Service
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -97,12 +98,12 @@ export default function Page() {
         <p className="eyebrow">Need help choosing?</p>
         <h2>Request service and describe what is happening with your system.</h2>
         <div className="hero-actions">
-          <Link className="home-button home-button-primary" href="/contact">
+          <a className="home-button home-button-primary" href={PHONE_HREF}>
             Call Now
-          </Link>
-          <Link className="home-button home-button-secondary" href="/contact">
+          </a>
+          <a className="home-button home-button-secondary" href={BOOKING_URL}>
             Request Service
-          </Link>
+          </a>
         </div>
       </section>
     </div>

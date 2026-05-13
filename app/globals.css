@@ -306,6 +306,12 @@ a {
     var(--background);
 }
 
+.service-area-page {
+  background:
+    linear-gradient(180deg, #fffaf4 0, var(--background) 24rem),
+    var(--background);
+}
+
 .home-hero,
 .home-section,
 .final-cta {
@@ -537,6 +543,30 @@ a {
   font-weight: 750;
 }
 
+.city-card-grid {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.city-card-grid a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 4.25rem;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--brand-strong);
+  padding: 1rem 1.1rem;
+  font-weight: 850;
+}
+
+.city-card-grid a::after {
+  content: "View area";
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 750;
+}
+
 .process-list {
   display: grid;
   gap: 0.85rem;
@@ -643,6 +673,10 @@ a {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .city-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .process-list {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -650,6 +684,10 @@ a {
 
 @media (min-width: 980px) {
   .service-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .city-card-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }

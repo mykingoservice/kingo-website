@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BOOKING_URL, PHONE_HREF } from "./cta-links";
 
 const coreServices = [
   {
@@ -65,12 +66,12 @@ export default function Home() {
             installation, maintenance, emergency HVAC, and comfort planning.
           </p>
           <div className="hero-actions">
-            <Link className="home-button home-button-primary" href="/contact">
+            <a className="home-button home-button-primary" href={PHONE_HREF}>
               Call Now
-            </Link>
-            <Link className="home-button home-button-secondary" href="/contact">
+            </a>
+            <a className="home-button home-button-secondary" href={BOOKING_URL}>
               Request Service
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -152,7 +153,7 @@ export default function Home() {
             Use the emergency HVAC page to start the service request path for
             urgent heating or cooling issues.
           </p>
-          <Link href="/emergency-hvac">Emergency HVAC</Link>
+          <a href={PHONE_HREF}>Emergency HVAC</a>
         </div>
         <div className="split-card">
           <p className="eyebrow">Financing</p>
@@ -169,12 +170,12 @@ export default function Home() {
         <p className="eyebrow">Ready to talk through the HVAC issue?</p>
         <h2>Request service and share what is happening with your system.</h2>
         <div className="hero-actions">
-          <Link className="home-button home-button-primary" href="/contact">
+          <a className="home-button home-button-primary" href={PHONE_HREF}>
             Call Now
-          </Link>
-          <Link className="home-button home-button-secondary" href="/contact">
+          </a>
+          <a className="home-button home-button-secondary" href={BOOKING_URL}>
             Request Service
-          </Link>
+          </a>
         </div>
       </section>
     </div>
