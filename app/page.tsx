@@ -44,15 +44,15 @@ const priorityCities = [
 
 const trustPoints = [
   "Residential and commercial HVAC service",
-  "Emergency HVAC intake available 24/7",
-  "Financing options available for larger projects",
+  "24/7 emergency HVAC intake available",
+  "Financing options for larger projects",
   "Clear next steps before work moves forward",
 ];
 
 const processSteps = [
-  "Tell us what the system is doing right now.",
+  "Tell us what the HVAC system is doing right now.",
   "We review the issue and move the request into the right service path.",
-  "You review the next step before work moves forward.",
+  "You get a clear next step before work moves forward.",
 ];
 
 export default function Home() {
@@ -61,9 +61,9 @@ export default function Home() {
       <section className="home-hero">
         <div className="home-hero-copy">
           <p className="eyebrow">Houston-area heating and cooling</p>
-          <h1>Houston AC repair, heating, installation, and emergency HVAC intake.</h1>
+          <h1>AC repair, heating, installation, and emergency HVAC help across Greater Houston.</h1>
           <p className="hero-text">
-            Kingo Services Heating and Cooling supports homeowners and local
+            Kingo Services Heating and Cooling helps homeowners and local
             businesses across Greater Houston with repair, installation,
             maintenance, emergency HVAC intake, and larger comfort planning.
           </p>
@@ -76,8 +76,8 @@ export default function Home() {
             </a>
           </div>
           <p className="hero-text" style={{ marginTop: "0.75rem" }}>
-            Emergency intake available 24/7. Financing options available for
-            qualifying larger repair and replacement projects.
+            Emergency intake is available 24/7. Financing options are available
+            for qualifying larger repair and replacement projects.
           </p>
         </div>
 
@@ -91,8 +91,8 @@ export default function Home() {
             <strong>24/7 emergency HVAC intake</strong>
           </div>
           <div>
-            <span>Financing</span>
-            <strong>Options available for larger projects</strong>
+            <span>Booking</span>
+            <strong>Online service request available</strong>
           </div>
         </div>
       </section>
@@ -100,7 +100,7 @@ export default function Home() {
       <section className="home-section comfort-section">
         <div>
           <p className="eyebrow">Common HVAC problems</p>
-          <h2>Not cooling, weak airflow, odd noises, or uneven comfort?</h2>
+          <h2>Not cooling, weak airflow, strange noise, or uneven comfort?</h2>
         </div>
         <p>
           If the system is not cooling, not heating, leaking, short cycling,
@@ -126,7 +126,7 @@ export default function Home() {
 
       <section className="home-section">
         <div className="section-heading">
-          <p className="eyebrow">Why customers start here</p>
+          <p className="eyebrow">Why customers call</p>
           <h2>Clear service paths without extra confusion.</h2>
         </div>
         <div className="service-grid services-overview-grid">
@@ -155,8 +155,8 @@ export default function Home() {
 
       <section className="home-section process-section">
         <div className="section-heading">
-          <p className="eyebrow">Process</p>
-          <h2>A straightforward path from issue to next step.</h2>
+          <p className="eyebrow">How it works</p>
+          <h2>A straightforward path from HVAC issue to next step.</h2>
         </div>
         <ol className="process-list">
           {processSteps.map((step) => (
