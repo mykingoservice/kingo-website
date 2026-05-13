@@ -27,11 +27,6 @@ const coreServices = [
     title: "Commercial HVAC",
     text: "Commercial comfort support for light business environments.",
   },
-  {
-    href: "/services/duct-cleaning",
-    title: "Duct Cleaning",
-    text: "Duct service options for airflow and indoor comfort concerns.",
-  },
 ];
 
 const priorityCities = [

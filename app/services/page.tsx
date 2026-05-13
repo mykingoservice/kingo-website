@@ -28,11 +28,6 @@ const services = [
     text: "Seasonal service visits to help keep heating and cooling equipment on track.",
   },
   {
-    href: "/services/duct-cleaning",
-    title: "Duct Cleaning",
-    text: "Duct service options for airflow, dust, and indoor comfort concerns.",
-  },
-  {
     href: "/services/commercial-hvac",
     title: "Commercial HVAC",
     text: "Commercial heating and cooling support for local business environments.",
