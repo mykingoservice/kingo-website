@@ -125,15 +125,6 @@ export default function Page() {
             need before work moves forward.
           </p>
         </div>
-        <div className="split-card">
-          <p className="eyebrow">No duct cleaning</p>
-          <h2>Focused on core HVAC service.</h2>
-          <p>
-            Kingo Services does not position duct cleaning as a primary service.
-            The focus is heating, cooling, maintenance, emergency intake,
-            installation planning, and commercial HVAC support.
-          </p>
-        </div>
       </section>
 
       <section className="final-cta">

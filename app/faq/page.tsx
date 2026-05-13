@@ -12,11 +12,6 @@ const faqs = [
       "Yes. Kingo Services supports residential heating and cooling needs as well as commercial HVAC concerns for local business environments.",
   },
   {
-    question: "Do you offer duct cleaning?",
-    answer:
-      "No. Kingo Services is focused on core HVAC service, including repair, installation, maintenance, commercial HVAC, and emergency intake.",
-  },
-  {
     question: "What information should I share when requesting service?",
     answer:
       "Share your name, callback number, service city or address, property type, system issue, urgency, and whether anyone vulnerable is affected.",
