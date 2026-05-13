@@ -41,3 +41,5 @@ yarn-error.log*
 next-env.d.ts
 
 kingo-website-hostinger-export.zip
+
+.backup-website-finish/
