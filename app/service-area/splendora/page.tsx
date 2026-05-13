@@ -39,7 +39,7 @@ export default function Page() {
               href={PHONE_HREF}
               className="rounded-full bg-blue-700 px-6 py-3 text-center font-semibold text-white shadow-sm hover:bg-blue-800"
             >
-              Call {"(832) 517-1464"}
+              Call (832) 517-1464
             </a>
             <Link
               href={BOOKING_URL}
@@ -96,7 +96,7 @@ export default function Page() {
             href={PHONE_HREF}
             className="rounded-full bg-white px-6 py-3 text-center font-semibold text-slate-950 hover:bg-slate-100"
           >
-            Call {"(832) 517-1464"}
+            Call (832) 517-1464
           </a>
           <Link
             href={BOOKING_URL}
