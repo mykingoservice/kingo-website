@@ -1,65 +1,182 @@
-import Image from "next/image";
+import Link from "next/link";
+
+const coreServices = [
+  {
+    href: "/services/ac-repair",
+    title: "AC Repair",
+    text: "Troubleshooting and repair support when cooling performance drops.",
+  },
+  {
+    href: "/services/ac-installation",
+    title: "AC Installation",
+    text: "Replacement and installation planning for home comfort systems.",
+  },
+  {
+    href: "/services/hvac-maintenance",
+    title: "HVAC Maintenance",
+    text: "Seasonal service visits to help keep equipment running smoothly.",
+  },
+  {
+    href: "/services/heating-repair",
+    title: "Heating Repair",
+    text: "Heating system diagnostics and repair for cooler Houston-area days.",
+  },
+  {
+    href: "/services/commercial-hvac",
+    title: "Commercial HVAC",
+    text: "Commercial comfort support for light business environments.",
+  },
+  {
+    href: "/services/duct-cleaning",
+    title: "Duct Cleaning",
+    text: "Duct service options for airflow and indoor comfort concerns.",
+  },
+];
+
+const priorityCities = [
+  { href: "/service-area/houston", label: "Houston" },
+  { href: "/service-area/splendora", label: "Splendora" },
+  { href: "/service-area/montgomery", label: "Montgomery" },
+  { href: "/service-area/conroe", label: "Conroe" },
+  { href: "/service-area/the-woodlands", label: "The Woodlands" },
+  { href: "/service-area/spring", label: "Spring" },
+  { href: "/service-area/katy", label: "Katy" },
+  { href: "/service-area/sugar-land", label: "Sugar Land" },
+  { href: "/service-area/cypress", label: "Cypress" },
+  { href: "/service-area/humble", label: "Humble" },
+];
+
+const processSteps = [
+  "Tell us what is happening with the system.",
+  "Schedule the next available service path.",
+  "Review findings and options before work moves forward.",
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="home-page">
+      <section className="home-hero">
+        <div className="home-hero-copy">
+          <p className="eyebrow">Houston-area heating and cooling</p>
+          <h1>HVAC service for hot days, cold snaps, and the comfort in between.</h1>
+          <p className="hero-text">
+            Kingo Services Heating and Cooling supports homeowners and local
+            businesses across the Greater Houston area with repair,
+            installation, maintenance, emergency HVAC, and comfort planning.
           </p>
+          <div className="hero-actions">
+            <Link className="home-button home-button-primary" href="/contact">
+              Call Now
+            </Link>
+            <Link className="home-button home-button-secondary" href="/contact">
+              Request Service
+            </Link>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="hero-panel" aria-label="Service focus">
+          <div>
+            <span>Primary focus</span>
+            <strong>Cooling, heating, and indoor comfort</strong>
+          </div>
+          <div>
+            <span>Service type</span>
+            <strong>Residential and commercial HVAC</strong>
+          </div>
+          <div>
+            <span>Next step</span>
+            <strong>Share the issue and request scheduling</strong>
+          </div>
         </div>
-      </main>
+      </section>
+
+      <section className="home-section comfort-section">
+        <div>
+          <p className="eyebrow">When comfort starts slipping</p>
+          <h2>Small HVAC problems can turn into long, uncomfortable days.</h2>
+        </div>
+        <p>
+          Warm rooms, weak airflow, short cycling, unusual sounds, and uneven
+          comfort are all good reasons to request help. Exact availability and
+          service details can be confirmed when scheduling.
+        </p>
+      </section>
+
+      <section className="home-section">
+        <div className="section-heading">
+          <p className="eyebrow">Core services</p>
+          <h2>Start with the service that fits the problem.</h2>
+        </div>
+        <div className="service-grid">
+          {coreServices.map((service) => (
+            <Link className="service-card" href={service.href} key={service.href}>
+              <span>{service.title}</span>
+              <p>{service.text}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="home-section area-section">
+        <div className="section-heading">
+          <p className="eyebrow">Service area</p>
+          <h2>HVAC help across Houston and nearby communities.</h2>
+          <Link href="/service-area">View full service area</Link>
+        </div>
+        <div className="city-list" aria-label="Priority service cities">
+          {priorityCities.map((city) => (
+            <Link href={city.href} key={city.href}>
+              {city.label}
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="home-section process-section">
+        <div className="section-heading">
+          <p className="eyebrow">Process</p>
+          <h2>A straightforward path from issue to next step.</h2>
+        </div>
+        <ol className="process-list">
+          {processSteps.map((step) => (
+            <li key={step}>{step}</li>
+          ))}
+        </ol>
+      </section>
+
+      <section className="home-section split-section">
+        <div className="split-card">
+          <p className="eyebrow">Emergency HVAC</p>
+          <h2>When the system needs urgent attention.</h2>
+          <p>
+            Use the emergency HVAC page to start the service request path for
+            urgent heating or cooling issues.
+          </p>
+          <Link href="/emergency-hvac">Emergency HVAC</Link>
+        </div>
+        <div className="split-card">
+          <p className="eyebrow">Financing</p>
+          <h2>Planning for a larger comfort project.</h2>
+          <p>
+            For larger repair or replacement decisions, the financing page gives
+            visitors a clear place to continue.
+          </p>
+          <Link href="/financing">View Financing</Link>
+        </div>
+      </section>
+
+      <section className="final-cta">
+        <p className="eyebrow">Ready to talk through the HVAC issue?</p>
+        <h2>Request service and share what is happening with your system.</h2>
+        <div className="hero-actions">
+          <Link className="home-button home-button-primary" href="/contact">
+            Call Now
+          </Link>
+          <Link className="home-button home-button-secondary" href="/contact">
+            Request Service
+          </Link>
+        </div>
+      </section>
     </div>
   );
 }
