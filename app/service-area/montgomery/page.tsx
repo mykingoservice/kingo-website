@@ -5,7 +5,7 @@ const services = [
   "AC repair for Montgomery homes, residential properties, and nearby rural properties.",
   "AC installation and replacement options for aging or underperforming cooling systems.",
   "Heating repair for cold-weather comfort issues and system failures.",
-  "Heating installation for homes and properties needing dependable heat.",
+  "Heating installation for homes and properties that need dependable heat.",
   "HVAC maintenance to help reduce breakdowns and catch problems early.",
   "Commercial HVAC support for Montgomery-area local businesses.",
   "Emergency HVAC intake for urgent no-cool, no-heat, or comfort-risk situations.",
@@ -15,7 +15,7 @@ const intakeItems = [
   "Service address, nearby cross streets, or rural property details.",
   "Whether the property is residential, commercial, or a nearby rural property.",
   "Main issue: no cooling, no heating, weak airflow, system not starting, leaking, or unusual noise.",
-  "System type if known, including attic, closet, rooftop, package unit, or split system.",
+  "System type if known, including attic, closet, package unit, rooftop unit, or split system.",
   "Best callback number and preferred appointment window.",
 ];
 
@@ -31,9 +31,7 @@ export default function Page() {
             Montgomery HVAC Service Area
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-700">
-            Kingo Services Heating and Cooling serves Montgomery, Texas homes, nearby rural
-            properties, residential properties, and local businesses with practical heating and
-            cooling service.
+            Kingo Services Heating and Cooling serves Montgomery, Texas with practical heating and cooling support for homes, nearby rural properties, residential properties, and local businesses.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
@@ -54,8 +52,7 @@ export default function Page() {
         <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
           <h2 className="text-xl font-bold text-slate-950">Montgomery service intake</h2>
           <p className="mt-3 text-slate-700">
-            For faster scheduling, provide the service address, nearby cross streets, or rural
-            property details when requesting service.
+            For faster scheduling, provide the service address, nearby cross streets, or rural property details when requesting service.
           </p>
           <ul className="mt-5 space-y-3 text-sm text-slate-700">
             {intakeItems.map((item) => (
@@ -72,9 +69,7 @@ export default function Page() {
           Heating and cooling services in Montgomery
         </h2>
         <p className="mt-4 max-w-3xl text-slate-700">
-          Whether the call is for a home, rural property, residential property, or local business,
-          the goal is to identify the issue clearly, explain the practical options, and restore
-          comfort without confusion.
+          Whether the call is for a home, nearby rural property, residential property, or local business, the goal is to identify the issue clearly, explain the practical options, and restore comfort without confusion.
         </p>
         <div className="mt-8 grid gap-4 md:grid-cols-2">
           {services.map((service) => (
@@ -90,8 +85,7 @@ export default function Page() {
           Need AC, heating, maintenance, commercial HVAC, or emergency help in Montgomery?
         </h2>
         <p className="mt-4 max-w-3xl text-slate-300">
-          Call Kingo Services Heating and Cooling or request service online. Include the service
-          address, nearby cross streets, or rural property details so the call can be handled faster.
+          Call Kingo Services Heating and Cooling or request service online. Include the service address, nearby cross streets, or rural property details so the call can be handled faster.
         </p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <a
