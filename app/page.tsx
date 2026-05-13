@@ -5,27 +5,27 @@ const coreServices = [
   {
     href: "/services/ac-repair",
     title: "AC Repair",
-    text: "Troubleshooting and repair support when cooling performance drops.",
+    text: "Fast troubleshooting and repair support when cooling drops, airflow weakens, or the system stops keeping up.",
   },
   {
     href: "/services/ac-installation",
     title: "AC Installation",
-    text: "Replacement and installation planning for home comfort systems.",
+    text: "Replacement and installation planning for homes and light commercial properties that need a stronger long-term solution.",
   },
   {
     href: "/services/hvac-maintenance",
     title: "HVAC Maintenance",
-    text: "Seasonal service visits to help keep equipment running smoothly.",
+    text: "Seasonal maintenance to help reduce breakdowns, catch wear early, and keep comfort more consistent.",
   },
   {
     href: "/services/heating-repair",
     title: "Heating Repair",
-    text: "Heating system diagnostics and repair for cooler Houston-area days.",
+    text: "Heating diagnostics and repair when cold weather exposes system problems or weak performance.",
   },
   {
     href: "/services/commercial-hvac",
     title: "Commercial HVAC",
-    text: "Commercial comfort support for light business environments.",
+    text: "Commercial HVAC support for local business environments that need reliable heating and cooling service.",
   },
 ];
 
@@ -42,10 +42,17 @@ const priorityCities = [
   { href: "/service-area/humble", label: "Humble" },
 ];
 
+const trustPoints = [
+  "Residential and commercial HVAC service",
+  "Emergency HVAC intake available 24/7",
+  "Financing options available for larger projects",
+  "Clear next steps before work moves forward",
+];
+
 const processSteps = [
-  "Tell us what is happening with the system.",
-  "Schedule the next available service path.",
-  "Review findings and options before work moves forward.",
+  "Tell us what the system is doing right now.",
+  "We review the issue and move the request into the right service path.",
+  "You review the next step before work moves forward.",
 ];
 
 export default function Home() {
@@ -54,54 +61,58 @@ export default function Home() {
       <section className="home-hero">
         <div className="home-hero-copy">
           <p className="eyebrow">Houston-area heating and cooling</p>
-          <h1>HVAC service for hot days, cold snaps, and the comfort in between.</h1>
+          <h1>Houston AC repair, heating, installation, and emergency HVAC intake.</h1>
           <p className="hero-text">
             Kingo Services Heating and Cooling supports homeowners and local
-            businesses across the Greater Houston area with repair,
-            installation, maintenance, emergency HVAC, and comfort planning.
+            businesses across Greater Houston with repair, installation,
+            maintenance, emergency HVAC intake, and larger comfort planning.
           </p>
           <div className="hero-actions">
             <a className="home-button home-button-primary" href={PHONE_HREF}>
-              Call Now
+              Call (832) 517-1464
             </a>
             <a className="home-button home-button-secondary" href={BOOKING_URL}>
-              Request Service
+              Book Online
             </a>
           </div>
+          <p className="hero-text" style={{ marginTop: "0.75rem" }}>
+            Emergency intake available 24/7. Financing options available for
+            qualifying larger repair and replacement projects.
+          </p>
         </div>
 
-        <div className="hero-panel" aria-label="Service focus">
+        <div className="hero-panel" aria-label="Why Kingo">
           <div>
-            <span>Primary focus</span>
-            <strong>Cooling, heating, and indoor comfort</strong>
+            <span>Phone</span>
+            <strong>(832) 517-1464</strong>
           </div>
           <div>
-            <span>Service type</span>
-            <strong>Residential and commercial HVAC</strong>
+            <span>Emergency</span>
+            <strong>24/7 emergency HVAC intake</strong>
           </div>
           <div>
-            <span>Next step</span>
-            <strong>Share the issue and request scheduling</strong>
+            <span>Financing</span>
+            <strong>Options available for larger projects</strong>
           </div>
         </div>
       </section>
 
       <section className="home-section comfort-section">
         <div>
-          <p className="eyebrow">When comfort starts slipping</p>
-          <h2>Small HVAC problems can turn into long, uncomfortable days.</h2>
+          <p className="eyebrow">Common HVAC problems</p>
+          <h2>Not cooling, weak airflow, odd noises, or uneven comfort?</h2>
         </div>
         <p>
-          Warm rooms, weak airflow, short cycling, unusual sounds, and uneven
-          comfort are all good reasons to request help. Exact availability and
-          service details can be confirmed when scheduling.
+          If the system is not cooling, not heating, leaking, short cycling,
+          struggling with airflow, or creating comfort problems across the
+          property, that is enough reason to start service.
         </p>
       </section>
 
       <section className="home-section">
         <div className="section-heading">
           <p className="eyebrow">Core services</p>
-          <h2>Start with the service that fits the problem.</h2>
+          <h2>Start with the service that matches the issue.</h2>
         </div>
         <div className="service-grid">
           {coreServices.map((service) => (
@@ -109,6 +120,20 @@ export default function Home() {
               <span>{service.title}</span>
               <p>{service.text}</p>
             </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="home-section">
+        <div className="section-heading">
+          <p className="eyebrow">Why customers start here</p>
+          <h2>Clear service paths without extra confusion.</h2>
+        </div>
+        <div className="service-grid services-overview-grid">
+          {trustPoints.map((point) => (
+            <div className="service-card" key={point}>
+              <span>{point}</span>
+            </div>
           ))}
         </div>
       </section>
@@ -143,33 +168,33 @@ export default function Home() {
       <section className="home-section split-section">
         <div className="split-card">
           <p className="eyebrow">Emergency HVAC</p>
-          <h2>When the system needs urgent attention.</h2>
+          <h2>24/7 emergency HVAC intake for serious heating and cooling issues.</h2>
           <p>
-            Use the emergency HVAC page to start the service request path for
-            urgent heating or cooling issues.
+            Start emergency intake when the system is down, comfort risk is
+            rising, or the situation needs faster review and prioritization.
           </p>
-          <a href={PHONE_HREF}>Emergency HVAC</a>
+          <Link href="/emergency-hvac">Open Emergency HVAC</Link>
         </div>
         <div className="split-card">
           <p className="eyebrow">Financing</p>
-          <h2>Planning for a larger comfort project.</h2>
+          <h2>Financing options for bigger repair and replacement decisions.</h2>
           <p>
-            For larger repair or replacement decisions, the financing page gives
-            visitors a clear place to continue.
+            When the project is larger than a quick repair, the financing page
+            gives customers a clearer path to continue.
           </p>
           <Link href="/financing">View Financing</Link>
         </div>
       </section>
 
       <section className="final-cta">
-        <p className="eyebrow">Ready to talk through the HVAC issue?</p>
-        <h2>Request service and share what is happening with your system.</h2>
+        <p className="eyebrow">Ready to start?</p>
+        <h2>Call now or book online and tell us what your HVAC system is doing.</h2>
         <div className="hero-actions">
           <a className="home-button home-button-primary" href={PHONE_HREF}>
-            Call Now
+            Call (832) 517-1464
           </a>
           <a className="home-button home-button-secondary" href={BOOKING_URL}>
-            Request Service
+            Book Online
           </a>
         </div>
       </section>
