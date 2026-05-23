@@ -1,4 +1,21 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { BOOKING_URL, PHONE_HREF } from "../cta-links";
+
+export const metadata: Metadata = {
+  title: "Kingo HVAC Reviews and Job Proof",
+  description:
+    "Review Post Pin pages from Kingo Services connect real Google reviews to documented Houston-area HVAC job proof.",
+};
+
+const reviewPins = [
+  {
+    href: "/reviews/job-2020-elizabeth-md-carrier-condenser/",
+    customer: "Elizabeth MD",
+    job: "Job #2020 — Carrier condenser installation",
+    text: "A Review Post Pin connecting a Google review to the documented Carrier condenser installation proof page.",
+  },
+];
 
 const trustPoints = [
   {
@@ -41,12 +58,12 @@ export default function Page() {
     <div className="services-page">
       <section className="home-section services-hero">
         <div>
-          <p className="eyebrow">Reviews</p>
-          <h1>Kingo Services customer reviews and trust signals.</h1>
+          <p className="eyebrow">Review Post Pins</p>
+          <h1>Kingo Services reviews connected to documented HVAC job proof.</h1>
           <p className="hero-text">
-            Reviews help customers understand how Kingo Services handles HVAC
-            repair, installation planning, maintenance, commercial HVAC, and
-            emergency intake across the Houston metro area.
+            Review Post Pin pages connect customer review signals to real job
+            proof pages, helping Houston-area HVAC customers evaluate the work,
+            service path, and connected proof before calling.
           </p>
           <div className="hero-actions">
             <a className="home-button home-button-primary" href={PHONE_HREF}>
@@ -56,6 +73,22 @@ export default function Page() {
               Request Service
             </a>
           </div>
+        </div>
+      </section>
+
+      <section className="home-section">
+        <div className="section-heading">
+          <p className="eyebrow">Pinned reviews</p>
+          <h2>Review pages with connected job proof.</h2>
+        </div>
+        <div className="service-grid services-overview-grid">
+          {reviewPins.map((pin) => (
+            <Link className="service-card" href={pin.href} key={pin.href}>
+              <span>{pin.customer}</span>
+              <p>{pin.job}</p>
+              <p>{pin.text}</p>
+            </Link>
+          ))}
         </div>
       </section>
 
