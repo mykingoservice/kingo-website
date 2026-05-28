@@ -4,7 +4,7 @@ export default function ThisRoomNeededMoreAirPage() {
   return (
     <main className="mx-auto max-w-5xl px-6 py-16">
       <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-neutral-500">
-        Content Post Pin 📍™ / Short Post Pin 📍™
+        Content Post Pin 📍™ / Video Post Pin 📍™
       </p>
 
       <h1 className="text-4xl font-bold tracking-tight">
@@ -13,8 +13,8 @@ export default function ThisRoomNeededMoreAirPage() {
 
       <p className="mt-6 max-w-2xl text-lg text-neutral-700">
         One airflow issue can make an entire room uncomfortable even when the AC
-        is running. This post connects the short-form clips, full video, and
-        website proof into one Content Post Pin 📍™ asset.
+        is running. This post connects the long-form video, short-form clips,
+        and website proof into one Content Post Pin 📍™ asset.
       </p>
 
       <section className="mt-10 overflow-hidden rounded-2xl border bg-black shadow-sm">

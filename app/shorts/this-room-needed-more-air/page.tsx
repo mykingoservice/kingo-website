@@ -25,6 +25,18 @@ export default function ThisRoomNeededMoreAirPage() {
           area.
         </p>
 
+        <div className="mb-8 overflow-hidden rounded-2xl border bg-black">
+          <div className="aspect-[9/16] w-full">
+            <iframe
+              className="h-full w-full"
+              src="https://www.youtube.com/embed/IGV6hmO6PHY"
+              title="This room needed more air short"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
+        </div>
+
         <div className="mb-8 rounded-xl bg-neutral-100 p-6">
           <h2 className="mb-2 text-xl font-semibold text-neutral-950">
             What this short is about
@@ -40,14 +52,14 @@ export default function ThisRoomNeededMoreAirPage() {
         <div className="grid gap-4 sm:grid-cols-2">
           <Link
             href="/services/ac-repair"
-            className="rounded-xl bg-neutral-950 px-5 py-4 text-center font-semibold text-white"
+            className="rounded-xl border border-red-700 bg-red-700 px-5 py-4 text-center font-semibold text-white"
           >
             AC Repair Services
           </Link>
 
           <Link
             href="/hvac-how-to/how-to-add-airflow-to-an-extra-room"
-            className="rounded-xl border border-neutral-300 px-5 py-4 text-center font-semibold text-neutral-950"
+            className="rounded-xl border border-neutral-300 bg-white px-5 py-4 text-center font-semibold text-neutral-950"
           >
             Learn About Adding Airflow
           </Link>
