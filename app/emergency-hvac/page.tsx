@@ -77,6 +77,13 @@ export default function Page() {
               Submit Emergency Intake
             </a>
           </div>
+          <p className="hero-text">
+            Emergency and after-hours service is available. Depending on time,
+            distance, and technician availability, an additional emergency
+            dispatch fee may apply. Any additional charges are discussed and
+            approved before service is scheduled. For non-emergency appointments
+            during normal business hours, standard diagnostic rates apply.
+          </p>
         </div>
       </section>
 
