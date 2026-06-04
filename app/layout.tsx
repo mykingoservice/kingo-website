@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import { BOOKING_URL, PHONE_HREF } from "./cta-links";
+import { MobileMenu } from "../components/mobile-menu";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -10,15 +12,20 @@ export const metadata: Metadata = {
   },
   description:
     "Residential and commercial HVAC service, repair, installation, and maintenance across Greater Houston.",
+  icons: {
+    icon: "/kingo-favicon.png",
+    apple: "/kingo-favicon.png",
+  },
 };
 
 const primaryNav = [
+  { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
+  { href: "/emergency-hvac", label: "Emergency HVAC" },
   { href: "/service-area", label: "Service Area" },
-  { href: "/financing", label: "Financing" },
   { href: "/reviews", label: "Reviews" },
   { href: "/about", label: "About" },
-  { href: "/faq", label: "FAQ" },
+  { href: "/contact", label: "Contact" },
 ];
 
 const serviceLinks = [
@@ -42,6 +49,23 @@ const areaLinks = [
   { href: "/service-area/humble", label: "Humble" },
 ];
 
+const pushEngageSdk = `
+(function(w, d) {
+  w.PushEngage = w.PushEngage || [];
+  w._peq = w._peq || [];
+  PushEngage.push(['init', {
+      appId: '70f437f1-41bd-4e83-8506-b2e6b03cd5e2'
+  }]);
+
+  var e = d.createElement('script');
+
+  e.src = 'https://clientcdn.pushengage.com/sdks/pushengage-web-sdk.js';
+  e.async = true;
+  e.type = 'text/javascript';
+  d.head.appendChild(e);
+})(window, document);
+`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -64,11 +88,11 @@ export default function RootLayout({
             <div className="nav-wrap">
               <Link className="brand" href="/" aria-label="Kingo Services home">
                 <span className="brand-mark" aria-hidden="true">
-                  K
+                  <img src="/kingo-favicon.png" alt="" />
                 </span>
                 <span>
                   <span className="brand-name">Kingo Services</span>
-                  <span className="brand-line">Heating & Cooling</span>
+                  <span className="brand-line">Heating and Cooling</span>
                 </span>
               </Link>
 
@@ -79,6 +103,8 @@ export default function RootLayout({
                   </Link>
                 ))}
               </nav>
+
+              <MobileMenu items={primaryNav} />
 
               <a className="header-cta" href={BOOKING_URL}>
                 Schedule Service
@@ -94,11 +120,11 @@ export default function RootLayout({
             <div className="footer-brand">
               <Link className="brand" href="/" aria-label="Kingo Services home">
                 <span className="brand-mark" aria-hidden="true">
-                  K
+                  <img src="/kingo-favicon.png" alt="" />
                 </span>
                 <span>
                   <span className="brand-name">Kingo Services</span>
-                  <span className="brand-line">Heating & Cooling</span>
+                  <span className="brand-line">Heating and Cooling</span>
                 </span>
               </Link>
               <p>
@@ -148,6 +174,11 @@ export default function RootLayout({
             <a href={BOOKING_URL}>Schedule</a>
           </div>
         </div>
+        <Script
+          id="pushengage-sdk"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{ __html: pushEngageSdk }}
+        />
       </body>
     </html>
   );
