@@ -17,6 +17,29 @@ const jobPins = [
     description: "Carrier condenser installation and startup. Vacuum pulled properly and refrigerant charge verified.",
     date: "2026-05-20",
   },
+  {
+    href: "/job-post-pins/job-2312-sugar-land-extra-room-airflow/",
+    jobId: "Job #2312",
+    location: "Sugar Land, TX",
+    service: "Airflow / Ductwork Modification",
+    description:
+      "Added conditioned airflow to an extra room using one existing duct line, a triangular branch transition, collars, flex duct, spray glue, foil tape, and zip ties.",
+    date: "2026-05-20",
+    supportingLinks: [
+      {
+        href: "/hvac-how-to/how-to-add-airflow-to-an-extra-room/",
+        label: "Blog Post Pin™",
+      },
+      {
+        href: "https://youtube.com/shorts/IGV6hmO6PHY",
+        label: "Short Post Pin™",
+      },
+      {
+        href: "https://youtu.be/t8sI-eGkF9s",
+        label: "Video Post Pin™",
+      },
+    ],
+  },
 ];
 
 export default function JobPostPinsIndex() {
@@ -104,7 +127,7 @@ export default function JobPostPinsIndex() {
 
         <div className="service-grid">
           {jobPins.map((pin) => (
-            <Link className="service-card" href={pin.href} key={pin.jobId}>
+            <article className="service-card" key={pin.jobId}>
               <span style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                 <strong>{pin.jobId}</strong>
                 <span className="eyebrow" style={{ margin: 0, fontSize: "0.72rem" }}>{pin.date}</span>
@@ -112,8 +135,25 @@ export default function JobPostPinsIndex() {
               <strong style={{ display: "block", marginTop: "0.5rem", color: "var(--brand-strong)", fontSize: "1.1rem" }}>{pin.service}</strong>
               <p style={{ marginBlock: "0.5rem" }}>{pin.location}</p>
               <p>{pin.description}</p>
-              <span style={{ display: "block", marginTop: "1rem", textDecoration: "underline", fontSize: "0.9rem" }}>View Job Post Pin™ &rarr;</span>
-            </Link>
+              {pin.supportingLinks ? (
+                <div className="city-list" style={{ marginTop: "1rem" }}>
+                  {pin.supportingLinks.map((link) =>
+                    link.href.startsWith("/") ? (
+                      <Link href={link.href} key={link.href}>
+                        {link.label}
+                      </Link>
+                    ) : (
+                      <a href={link.href} key={link.href}>
+                        {link.label}
+                      </a>
+                    )
+                  )}
+                </div>
+              ) : null}
+              <Link href={pin.href} style={{ display: "block", marginTop: "1rem", textDecoration: "underline", fontSize: "0.9rem" }}>
+                View Job Post Pin™ &rarr;
+              </Link>
+            </article>
           ))}
         </div>
       </section>
