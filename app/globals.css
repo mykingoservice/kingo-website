@@ -940,3 +940,11 @@ a {
   -webkit-overflow-scrolling: touch;
   padding-bottom: 6rem;
 }
+
+.mobile-menu-logo {
+  width: 2.65rem;
+  height: 2.65rem;
+  border-radius: 999px;
+  object-fit: cover;
+  display: block;
+}
