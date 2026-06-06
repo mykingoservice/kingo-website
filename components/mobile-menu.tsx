@@ -15,6 +15,7 @@ const iconMap: Record<string, string> = {
   "Emergency HVAC": "!",
   "Service Area": "⌖",
   Reviews: "★",
+  Financing: "$",
   About: "i",
   Contact: "☎",
 };

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "%s | Kingo Services Heating and Cooling",
   },
   description:
-    "Residential and commercial HVAC service, repair, installation, and maintenance across Greater Houston.",
+    "Emergency HVAC, AC repair, heating repair, installation, and maintenance from Splendora across Northeast Greater Houston.",
   icons: {
     icon: "/kingo-favicon.png",
     apple: "/kingo-favicon.png",
@@ -20,10 +20,11 @@ export const metadata: Metadata = {
 
 const primaryNav = [
   { href: "/", label: "Home" },
-  { href: "/services", label: "Services" },
   { href: "/emergency-hvac", label: "Emergency HVAC" },
+  { href: "/services", label: "Services" },
   { href: "/service-area", label: "Service Area" },
   { href: "/reviews", label: "Reviews" },
+  { href: "/financing", label: "Financing" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
@@ -37,16 +38,15 @@ const serviceLinks = [
 ];
 
 const areaLinks = [
-  { href: "/service-area/houston", label: "Houston" },
   { href: "/service-area/splendora", label: "Splendora" },
-  { href: "/service-area/montgomery", label: "Montgomery" },
+  { href: "/service-area/new-caney", label: "New Caney" },
+  { href: "/service-area/porter", label: "Porter" },
+  { href: "/service-area/cleveland", label: "Cleveland" },
+  { href: "/service-area/humble", label: "Humble" },
   { href: "/service-area/conroe", label: "Conroe" },
+  { href: "/service-area/montgomery", label: "Montgomery" },
   { href: "/service-area/the-woodlands", label: "The Woodlands" },
   { href: "/service-area/spring", label: "Spring" },
-  { href: "/service-area/katy", label: "Katy" },
-  { href: "/service-area/sugar-land", label: "Sugar Land" },
-  { href: "/service-area/cypress", label: "Cypress" },
-  { href: "/service-area/humble", label: "Humble" },
 ];
 
 const pushEngageSdk = `
@@ -81,8 +81,8 @@ export default function RootLayout({
 
           <header className="site-header">
             <div className="top-bar">
-              <p>Greater Houston HVAC service</p>
-              <a href={PHONE_HREF}>Emergency HVAC</a>
+              <p>Northeast Greater Houston HVAC service</p>
+              <Link href="/emergency-hvac">Emergency HVAC</Link>
             </div>
 
             <div className="nav-wrap">
@@ -107,7 +107,7 @@ export default function RootLayout({
               <MobileMenu items={primaryNav} />
 
               <a className="header-cta" href={BOOKING_URL}>
-                Schedule Service
+                Book Online
               </a>
             </div>
           </header>
@@ -128,8 +128,8 @@ export default function RootLayout({
                 </span>
               </Link>
               <p>
-                HVAC repair, replacement, maintenance, and comfort planning for
-                homes and businesses across Greater Houston.
+                Emergency HVAC, AC repair, heating repair, maintenance, and
+                comfort planning from Splendora across Northeast Greater Houston.
               </p>
             </div>
 
@@ -154,7 +154,7 @@ export default function RootLayout({
             <div className="footer-actions">
               <h2>Need Service?</h2>
               <a className="footer-cta" href={PHONE_HREF}>
-                Contact Kingo
+                Call Kingo
               </a>
               <a className="footer-secondary" href={PHONE_HREF}>
                 Emergency HVAC
@@ -171,7 +171,7 @@ export default function RootLayout({
 
           <div className="mobile-cta-bar" aria-label="Service actions">
             <a href={PHONE_HREF}>Call Now</a>
-            <a href={BOOKING_URL}>Schedule</a>
+            <a href="/emergency-hvac">Emergency</a>
           </div>
         </div>
         <Script
