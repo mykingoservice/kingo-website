@@ -3,19 +3,14 @@ import { BOOKING_URL, PHONE_HREF } from "./cta-links";
 
 const coreServices = [
   {
+    href: "/emergency-hvac",
+    title: "Emergency HVAC",
+    text: "Emergency and after-hours HVAC intake when cooling, heating, or comfort risk needs faster attention.",
+  },
+  {
     href: "/services/ac-repair",
     title: "AC Repair",
-    text: "Fast troubleshooting and repair support when cooling drops, airflow weakens, or the system stops keeping up.",
-  },
-  {
-    href: "/services/ac-installation",
-    title: "AC Installation",
-    text: "Replacement and installation planning for homes and light commercial properties that need a stronger long-term solution.",
-  },
-  {
-    href: "/services/hvac-maintenance",
-    title: "HVAC Maintenance",
-    text: "Seasonal maintenance to help reduce breakdowns, catch wear early, and keep comfort more consistent.",
+    text: "Troubleshooting and repair when cooling drops, airflow weakens, or the system stops keeping up.",
   },
   {
     href: "/services/heating-repair",
@@ -23,36 +18,47 @@ const coreServices = [
     text: "Heating diagnostics and repair when cold weather exposes system problems or weak performance.",
   },
   {
+    href: "/services/hvac-maintenance",
+    title: "HVAC Maintenance",
+    text: "Seasonal maintenance to help reduce breakdowns, catch wear early, and keep comfort more consistent.",
+  },
+  {
+    href: "/services/ac-installation",
+    title: "AC Installation",
+    text: "Replacement and installation planning for homes and light commercial properties that need a stronger long-term solution.",
+  },
+  {
     href: "/services/commercial-hvac",
     title: "Commercial HVAC",
-    text: "Commercial HVAC support for local business environments that need reliable heating and cooling service.",
+    text: "Light commercial HVAC support for local business environments that need reliable heating and cooling service.",
   },
 ];
 
 const priorityCities = [
-  { href: "/service-area/houston", label: "Houston" },
   { href: "/service-area/splendora", label: "Splendora" },
-  { href: "/service-area/montgomery", label: "Montgomery" },
+  { href: "/service-area/new-caney", label: "New Caney" },
+  { href: "/service-area/porter", label: "Porter" },
+  { href: "/service-area/cleveland", label: "Cleveland" },
+  { href: "/service-area/humble", label: "Humble" },
   { href: "/service-area/conroe", label: "Conroe" },
+  { href: "/service-area/montgomery", label: "Montgomery" },
   { href: "/service-area/the-woodlands", label: "The Woodlands" },
   { href: "/service-area/spring", label: "Spring" },
-  { href: "/service-area/katy", label: "Katy" },
-  { href: "/service-area/sugar-land", label: "Sugar Land" },
-  { href: "/service-area/cypress", label: "Cypress" },
-  { href: "/service-area/humble", label: "Humble" },
 ];
 
 const trustPoints = [
-  "Residential and commercial HVAC service",
-  "24/7 emergency HVAC intake available",
+  "Owner-operated HVAC service",
+  "Emergency and after-hours intake available",
+  "Residential and light commercial support",
+  "Clear communication before dispatch",
+  "Real job proof and review-building system",
   "Financing options for larger projects",
-  "Clear next steps before work moves forward",
 ];
 
 const processSteps = [
   "Tell us what the HVAC system is doing right now.",
-  "We review the issue and move the request into the right service path.",
-  "You get a clear next step before work moves forward.",
+  "We confirm the location, system issue, urgency, and best next step.",
+  "Any emergency or after-hours dispatch charges are explained before the appointment is confirmed.",
 ];
 
 export default function Home() {
@@ -60,24 +66,29 @@ export default function Home() {
     <div className="home-page">
       <section className="home-hero">
         <div className="home-hero-copy">
-          <p className="eyebrow">Houston-area heating and cooling</p>
-          <h1>AC repair, heating, installation, and emergency HVAC help across Greater Houston.</h1>
+          <p className="eyebrow">Splendora-based emergency HVAC service</p>
+          <h1>Emergency HVAC, AC repair, and heating service across Northeast Greater Houston.</h1>
           <p className="hero-text">
             Kingo Services Heating and Cooling helps homeowners and local
-            businesses across Greater Houston with repair, installation,
-            maintenance, emergency HVAC intake, and larger comfort planning.
+            businesses with emergency HVAC intake, AC repair, heating repair,
+            maintenance, and replacement planning from the Splendora operating
+            hub into nearby Northeast Greater Houston communities.
           </p>
           <div className="hero-actions">
             <a className="home-button home-button-primary" href={PHONE_HREF}>
               Call (832) 517-1464
             </a>
+            <Link className="home-button home-button-secondary" href="/emergency-hvac">
+              Emergency HVAC
+            </Link>
             <a className="home-button home-button-secondary" href={BOOKING_URL}>
               Book Online
             </a>
           </div>
           <p className="hero-text" style={{ marginTop: "0.75rem" }}>
-            Emergency intake is available 24/7. Financing options are available
-            for qualifying larger repair and replacement projects.
+            Emergency and after-hours availability depends on location, schedule,
+            and current call volume. Any emergency or after-hours dispatch charges
+            are explained before the appointment is confirmed.
           </p>
         </div>
 
@@ -87,32 +98,32 @@ export default function Home() {
             <strong>(832) 517-1464</strong>
           </div>
           <div>
-            <span>Emergency</span>
-            <strong>24/7 emergency HVAC intake</strong>
+            <span>Hub</span>
+            <strong>Operating from Splendora, TX</strong>
           </div>
           <div>
-            <span>Booking</span>
-            <strong>Online service request available</strong>
+            <span>Emergency</span>
+            <strong>After-hours HVAC intake available</strong>
           </div>
         </div>
       </section>
 
       <section className="home-section comfort-section">
         <div>
-          <p className="eyebrow">Common HVAC problems</p>
-          <h2>Not cooling, weak airflow, strange noise, or uneven comfort?</h2>
+          <p className="eyebrow">Emergency HVAC problems</p>
+          <h2>AC stopped cooling, no heat, weak airflow, system down, or comfort risk rising?</h2>
         </div>
         <p>
           If the system is not cooling, not heating, leaking, short cycling,
           struggling with airflow, or creating comfort problems across the
-          property, that is enough reason to start service.
+          property, that is enough reason to call or start emergency HVAC intake.
         </p>
       </section>
 
       <section className="home-section">
         <div className="section-heading">
           <p className="eyebrow">Core services</p>
-          <h2>Start with the service that matches the issue.</h2>
+          <h2>Start with the service path that matches the issue.</h2>
         </div>
         <div className="service-grid">
           {coreServices.map((service) => (
@@ -124,24 +135,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="home-section">
-        <div className="section-heading">
-          <p className="eyebrow">Why customers call</p>
-          <h2>Clear service paths without extra confusion.</h2>
-        </div>
-        <div className="service-grid services-overview-grid">
-          {trustPoints.map((point) => (
-            <div className="service-card" key={point}>
-              <span>{point}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-
       <section className="home-section area-section">
         <div className="section-heading">
           <p className="eyebrow">Service area</p>
-          <h2>HVAC help across Houston and nearby communities.</h2>
+          <h2>HVAC service from Splendora into the Northeast Greater Houston corridor.</h2>
           <Link href="/service-area">View full service area</Link>
         </div>
         <div className="city-list" aria-label="Priority service cities">
@@ -149,6 +146,20 @@ export default function Home() {
             <Link href={city.href} key={city.href}>
               {city.label}
             </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="home-section">
+        <div className="section-heading">
+          <p className="eyebrow">Why customers call Kingo</p>
+          <h2>Clear service paths, owner-operator accountability, and no fake urgency.</h2>
+        </div>
+        <div className="service-grid services-overview-grid">
+          {trustPoints.map((point) => (
+            <div className="service-card" key={point}>
+              <span>{point}</span>
+            </div>
           ))}
         </div>
       </section>
@@ -168,7 +179,7 @@ export default function Home() {
       <section className="home-section split-section">
         <div className="split-card">
           <p className="eyebrow">Emergency HVAC</p>
-          <h2>24/7 emergency HVAC intake for serious heating and cooling issues.</h2>
+          <h2>Emergency and after-hours HVAC intake for serious heating and cooling issues.</h2>
           <p>
             Start emergency intake when the system is down, comfort risk is
             rising, or the situation needs faster review and prioritization.
@@ -176,23 +187,27 @@ export default function Home() {
           <Link href="/emergency-hvac">Open Emergency HVAC</Link>
         </div>
         <div className="split-card">
-          <p className="eyebrow">Financing</p>
-          <h2>Financing options for bigger repair and replacement decisions.</h2>
+          <p className="eyebrow">Proof-based HVAC work</p>
+          <h2>Real jobs, reviews, photos, and service-area proof build the authority.</h2>
           <p>
-            When the project is larger than a quick repair, the financing page
-            gives customers a clearer path to continue.
+            Kingo is building local SEO through real HVAC work, Job Post Pins™,
+            reviews, videos, and service-area pages instead of generic city-page
+            fluff.
           </p>
-          <Link href="/financing">View Financing</Link>
+          <Link href="/job-post-pins">View Recent Work</Link>
         </div>
       </section>
 
       <section className="final-cta">
         <p className="eyebrow">Ready to start?</p>
-        <h2>Call now or book online and tell us what your HVAC system is doing.</h2>
+        <h2>Call now, open Emergency HVAC, or book online and tell us what your system is doing.</h2>
         <div className="hero-actions">
           <a className="home-button home-button-primary" href={PHONE_HREF}>
             Call (832) 517-1464
           </a>
+          <Link className="home-button home-button-secondary" href="/emergency-hvac">
+            Emergency HVAC
+          </Link>
           <a className="home-button home-button-secondary" href={BOOKING_URL}>
             Book Online
           </a>
