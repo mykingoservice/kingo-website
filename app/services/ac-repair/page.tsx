@@ -53,7 +53,7 @@ export default function Page() {
       <section className="home-section services-hero">
         <div>
           <p className="eyebrow">AC Repair</p>
-          <h1>Cooling repair support for Houston-area comfort problems.</h1>
+          <h1>Cooling repair support for Splendora and Northeast Greater Houston comfort problems.</h1>
           <p className="hero-text">
             If your air conditioner is struggling, blowing warm air, cycling
             oddly, or not keeping rooms comfortable, request AC repair and share

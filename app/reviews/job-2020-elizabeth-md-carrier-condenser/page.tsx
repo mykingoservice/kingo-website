@@ -102,13 +102,13 @@ export default function Page() {
 
       <section className="home-section services-process">
         <div className="section-heading">
-          <p className="eyebrow">Houston-area HVAC trust</p>
+          <p className="eyebrow">HVAC trust — Splendora and Greater Houston</p>
           <h2>Reviews are stronger when they connect to real work.</h2>
           <p>
-            Kingo Services Heating and Cooling serves Houston-area customers
-            with heating, cooling, repair, installation, maintenance, and
-            emergency HVAC intake. Review Post Pins help connect customer trust
-            signals to the job records and service pages that explain the work.
+            Kingo Services Heating and Cooling operates from Splendora, TX and serves customers
+            across the Splendora corridor and Greater Houston with heating, cooling, repair,
+            installation, maintenance, and emergency HVAC intake. Review Post Pins help connect
+            customer trust signals to the job records and service pages that explain the work.
           </p>
         </div>
         <div className="city-list" aria-label="Related internal links">

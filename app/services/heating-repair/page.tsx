@@ -53,7 +53,7 @@ export default function Page() {
       <section className="home-section services-hero">
         <div>
           <p className="eyebrow">Heating Repair</p>
-          <h1>Heating repair support for Houston-area comfort problems.</h1>
+          <h1>Heating repair support for Splendora and Northeast Greater Houston comfort problems.</h1>
           <p className="hero-text">
             If your heating system is not keeping the home comfortable, cycling
             oddly, making new sounds, or showing signs of unreliable operation,

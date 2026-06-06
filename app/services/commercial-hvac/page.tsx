@@ -54,7 +54,7 @@ export default function Page() {
       <section className="home-section services-hero">
         <div>
           <p className="eyebrow">Commercial HVAC</p>
-          <h1>Commercial HVAC support for Houston-area businesses.</h1>
+          <h1>Commercial HVAC support for Splendora and Northeast Greater Houston businesses.</h1>
           <p className="hero-text">
             If your business, office, tenant space, or commercial property is
             dealing with heating, cooling, airflow, or comfort concerns, request

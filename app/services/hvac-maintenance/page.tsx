@@ -53,7 +53,7 @@ export default function Page() {
       <section className="home-section services-hero">
         <div>
           <p className="eyebrow">HVAC Maintenance</p>
-          <h1>Seasonal HVAC maintenance for Houston-area comfort systems.</h1>
+          <h1>Seasonal HVAC maintenance for Splendora and Northeast Greater Houston comfort systems.</h1>
           <p className="hero-text">
             If your heating and cooling system needs a seasonal check, airflow
             review, or general comfort maintenance, request service and share

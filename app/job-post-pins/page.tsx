@@ -50,7 +50,7 @@ export default function JobPostPinsIndex() {
           <p className="eyebrow">Kingo Services Proof Map</p>
           <h1>Job Post Pins™ — Real HVAC Proof Gallery</h1>
           <p className="hero-text">
-            We believe in proof, not promises. Every Job Post Pin™ represents real comfort work completed by Kingo Services technicians on-site across Greater Houston.
+            We believe in proof, not promises. Every Job Post Pin™ represents real comfort work completed by Kingo Services technicians on-site from Splendora across Greater Houston.
           </p>
           <div className="hero-actions">
             <a className="home-button home-button-primary" href={PHONE_HREF}>

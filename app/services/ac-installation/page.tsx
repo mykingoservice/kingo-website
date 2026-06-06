@@ -23,7 +23,7 @@ const installationSignals = [
   },
   {
     title: "Comfort planning",
-    text: "Installation can be part of a broader plan for reliable Houston-area cooling.",
+    text: "Installation can be part of a broader plan for reliable cooling across the Splendora corridor.",
   },
 ];
 
@@ -53,7 +53,7 @@ export default function Page() {
       <section className="home-section services-hero">
         <div>
           <p className="eyebrow">AC Installation</p>
-          <h1>Cooling system installation planning for Houston-area homes.</h1>
+          <h1>Cooling system installation planning for Splendora and Northeast Greater Houston homes.</h1>
           <p className="hero-text">
             When repair is no longer the right path, AC installation starts with
             understanding the comfort issue, the space, and what the next system

@@ -53,7 +53,7 @@ export default function Page() {
       <section className="home-section services-hero">
         <div>
           <p className="eyebrow">Heating Installation</p>
-          <h1>Heating installation planning for Houston-area homes.</h1>
+          <h1>Heating installation planning for Splendora and Northeast Greater Houston homes.</h1>
           <p className="hero-text">
             If your heating system is unreliable, outdated, or no longer
             supporting the comfort of the home, request a heating installation

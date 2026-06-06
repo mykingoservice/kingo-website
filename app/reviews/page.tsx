@@ -5,7 +5,7 @@ import { BOOKING_URL, PHONE_HREF } from "../cta-links";
 export const metadata: Metadata = {
   title: "Kingo HVAC Reviews and Job Proof",
   description:
-    "Review Post Pin pages from Kingo Services connect real Google reviews to documented Houston-area HVAC job proof.",
+    "Review Post Pin pages from Kingo Services connect real Google reviews to documented Splendora-corridor and Greater Houston HVAC job proof.",
 };
 
 const reviewPins = [
@@ -62,8 +62,8 @@ export default function Page() {
           <h1>Kingo Services reviews connected to documented HVAC job proof.</h1>
           <p className="hero-text">
             Review Post Pin pages connect customer review signals to real job
-            proof pages, helping Houston-area HVAC customers evaluate the work,
-            service path, and connected proof before calling.
+            proof pages, helping HVAC customers across the Splendora corridor and
+            Greater Houston evaluate the work, service path, and connected proof before calling.
           </p>
           <div className="hero-actions">
             <a className="home-button home-button-primary" href={PHONE_HREF}>
