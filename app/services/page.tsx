@@ -3,41 +3,46 @@ import { BOOKING_URL, PHONE_HREF } from "../cta-links";
 
 const services = [
   {
-    href: "/services/ac-repair",
-    title: "AC Repair",
-    text: "Cooling diagnostics and repair support when rooms are not staying comfortable.",
+    href: "/emergency-hvac",
+    title: "Emergency HVAC",
+    text: "Emergency and after-hours HVAC intake when no cooling, no heat, system failure, or comfort risk needs faster attention.",
   },
   {
-    href: "/services/ac-installation",
-    title: "AC Installation",
-    text: "Replacement and installation planning for a cooling system that fits the space.",
+    href: "/services/ac-repair",
+    title: "AC Repair",
+    text: "Cooling diagnostics and repair when the AC is not keeping up, airflow is weak, or the system stops cooling.",
   },
   {
     href: "/services/heating-repair",
     title: "Heating Repair",
-    text: "Heating system troubleshooting for cooler days and uneven indoor comfort.",
-  },
-  {
-    href: "/services/heating-installation",
-    title: "Heating Installation",
-    text: "New heating system planning when repair is no longer the right next step.",
+    text: "Heating troubleshooting and repair when the system will not heat, runs poorly, or creates uneven comfort.",
   },
   {
     href: "/services/hvac-maintenance",
     title: "HVAC Maintenance",
-    text: "Seasonal service visits to help keep heating and cooling equipment on track.",
+    text: "Seasonal service visits to help reduce breakdowns, catch wear early, and keep equipment on track.",
+  },
+  {
+    href: "/services/ac-installation",
+    title: "AC Installation",
+    text: "Replacement and installation planning when the cooling system is aging, undersized, or no longer worth repairing.",
+  },
+  {
+    href: "/services/heating-installation",
+    title: "Heating Installation",
+    text: "Heating system replacement planning when repair is no longer the strongest long-term answer.",
   },
   {
     href: "/services/commercial-hvac",
     title: "Commercial HVAC",
-    text: "Commercial heating and cooling support for local business environments.",
+    text: "Light commercial heating and cooling support for nearby local business environments.",
   },
 ];
 
 const processSteps = [
   "Start with the service category that best matches the issue.",
-  "Share the symptoms, location, and preferred scheduling window.",
-  "Review the next service step before work moves forward.",
+  "Share the system symptoms, service address, urgency, and preferred scheduling window.",
+  "Emergency or after-hours dispatch charges are explained before the appointment is confirmed.",
 ];
 
 export default function Page() {
@@ -45,18 +50,23 @@ export default function Page() {
     <div className="services-page">
       <section className="home-section services-hero">
         <div>
-          <p className="eyebrow">HVAC services</p>
-          <h1>Heating, cooling, maintenance, and comfort services for the Houston area.</h1>
+          <p className="eyebrow">HVAC services from Splendora</p>
+          <h1>Emergency HVAC, AC repair, heating repair, maintenance, and comfort services across Northeast Greater Houston.</h1>
           <p className="hero-text">
-            Choose the service that best matches the problem. Exact timing,
-            recommendations, and next steps can be confirmed during scheduling.
+            Kingo Services Heating and Cooling operates from Splendora and helps
+            nearby homeowners and local businesses with emergency HVAC intake,
+            AC repair, heating repair, maintenance, installation planning, and
+            light commercial HVAC service.
           </p>
           <div className="hero-actions">
             <a className="home-button home-button-primary" href={PHONE_HREF}>
               Call Now
             </a>
+            <Link className="home-button home-button-secondary" href="/emergency-hvac">
+              Emergency HVAC
+            </Link>
             <a className="home-button home-button-secondary" href={BOOKING_URL}>
-              Request Service
+              Book Online
             </a>
           </div>
         </div>
@@ -64,8 +74,8 @@ export default function Page() {
 
       <section className="home-section">
         <div className="section-heading">
-          <p className="eyebrow">Phase 1 services</p>
-          <h2>Find the right starting point for your HVAC request.</h2>
+          <p className="eyebrow">Core service paths</p>
+          <h2>Choose the service that matches the system problem.</h2>
         </div>
         <div className="service-grid services-overview-grid">
           {services.map((service) => (
@@ -80,7 +90,7 @@ export default function Page() {
       <section className="home-section services-process">
         <div className="section-heading">
           <p className="eyebrow">Simple process</p>
-          <h2>Clear next steps without overcomplicating the visit.</h2>
+          <h2>Clear next steps before the visit is confirmed.</h2>
         </div>
         <ol className="process-list">
           {processSteps.map((step) => (
@@ -90,14 +100,17 @@ export default function Page() {
       </section>
 
       <section className="final-cta">
-        <p className="eyebrow">Need help choosing?</p>
-        <h2>Request service and describe what is happening with your system.</h2>
+        <p className="eyebrow">Need HVAC help near Splendora?</p>
+        <h2>Call now, open Emergency HVAC, or book online and describe what your system is doing.</h2>
         <div className="hero-actions">
           <a className="home-button home-button-primary" href={PHONE_HREF}>
             Call Now
           </a>
+          <Link className="home-button home-button-secondary" href="/emergency-hvac">
+            Emergency HVAC
+          </Link>
           <a className="home-button home-button-secondary" href={BOOKING_URL}>
-            Request Service
+            Book Online
           </a>
         </div>
       </section>
