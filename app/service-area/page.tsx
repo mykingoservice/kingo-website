@@ -1,23 +1,32 @@
 import Link from "next/link";
 import { BOOKING_URL, PHONE_HREF } from "../cta-links";
 
-const cities = [
-  { href: "/service-area/houston", label: "Houston" },
+const primaryCities = [
   { href: "/service-area/splendora", label: "Splendora" },
-  { href: "/service-area/montgomery", label: "Montgomery" },
+  { href: "/service-area/new-caney", label: "New Caney" },
+  { href: "/service-area/porter", label: "Porter" },
+  { href: "/service-area/cleveland", label: "Cleveland" },
+];
+
+const nearbyCities = [
+  { href: "/service-area/humble", label: "Humble" },
   { href: "/service-area/conroe", label: "Conroe" },
+  { href: "/service-area/montgomery", label: "Montgomery" },
   { href: "/service-area/the-woodlands", label: "The Woodlands" },
   { href: "/service-area/spring", label: "Spring" },
+];
+
+const legacyCities = [
+  { href: "/service-area/houston", label: "Houston" },
+  { href: "/service-area/cypress", label: "Cypress" },
   { href: "/service-area/katy", label: "Katy" },
   { href: "/service-area/sugar-land", label: "Sugar Land" },
-  { href: "/service-area/cypress", label: "Cypress" },
-  { href: "/service-area/humble", label: "Humble" },
 ];
 
 const coverageNotes = [
-  "Share your city or nearby cross streets when requesting service.",
-  "Scheduling and availability can be confirmed during the request process.",
-  "Service recommendations depend on the system, property, and comfort issue.",
+  "Kingo operates from Splendora and prioritizes nearby Northeast Greater Houston service calls.",
+  "Emergency and after-hours availability depends on location, schedule, and current call volume.",
+  "Any emergency or after-hours dispatch charges are explained before the appointment is confirmed.",
 ];
 
 export default function Page() {
@@ -25,19 +34,24 @@ export default function Page() {
     <div className="service-area-page">
       <section className="home-section services-hero">
         <div>
-          <p className="eyebrow">Greater Houston service area</p>
-          <h1>HVAC service coverage across Houston and nearby communities.</h1>
+          <p className="eyebrow">Northeast Greater Houston service area</p>
+          <h1>HVAC service from Splendora into nearby Northeast Greater Houston communities.</h1>
           <p className="hero-text">
-            Kingo Services Heating and Cooling supports heating, cooling, and
-            indoor comfort requests across the Greater Houston area. Use this
-            page to find your city and continue to the local service-area page.
+            Kingo Services Heating and Cooling operates from Splendora and
+            serves nearby communities including New Caney, Porter, Cleveland,
+            Humble, Conroe, Montgomery, The Woodlands, and Spring. Emergency
+            HVAC, AC repair, heating repair, maintenance, and light commercial
+            HVAC service are available when schedule and location allow.
           </p>
           <div className="hero-actions">
             <a className="home-button home-button-primary" href={PHONE_HREF}>
               Call Now
             </a>
+            <Link className="home-button home-button-secondary" href="/emergency-hvac">
+              Emergency HVAC
+            </Link>
             <a className="home-button home-button-secondary" href={BOOKING_URL}>
-              Request Service
+              Book Online
             </a>
           </div>
         </div>
@@ -45,15 +59,51 @@ export default function Page() {
 
       <section className="home-section area-overview-section">
         <div className="section-heading">
-          <p className="eyebrow">Phase 1 cities</p>
-          <h2>Choose your service-area page.</h2>
+          <p className="eyebrow">Primary nearby service areas</p>
+          <h2>Backyard service corridor.</h2>
           <p>
-            These city pages are the current Phase 1 coverage set. If your
-            address is nearby, request service so coverage can be confirmed.
+            These are the closest priority communities to the Splendora
+            operating hub.
           </p>
         </div>
         <div className="city-card-grid">
-          {cities.map((city) => (
+          {primaryCities.map((city) => (
+            <Link href={city.href} key={city.href}>
+              {city.label}
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="home-section area-overview-section">
+        <div className="section-heading">
+          <p className="eyebrow">Nearby service areas</p>
+          <h2>Additional Northeast Greater Houston communities.</h2>
+          <p>
+            Kingo also serves selected nearby communities when scheduling,
+            distance, and job fit make sense.
+          </p>
+        </div>
+        <div className="city-card-grid">
+          {nearbyCities.map((city) => (
+            <Link href={city.href} key={city.href}>
+              {city.label}
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="home-section area-overview-section">
+        <div className="section-heading">
+          <p className="eyebrow">Other served areas by availability</p>
+          <h2>Legacy markets are still served when the job fits.</h2>
+          <p>
+            Kingo may still serve Houston and other larger Greater Houston
+            markets when scheduling, distance, and job type make sense.
+          </p>
+        </div>
+        <div className="city-card-grid">
+          {legacyCities.map((city) => (
             <Link href={city.href} key={city.href}>
               {city.label}
             </Link>
@@ -64,7 +114,7 @@ export default function Page() {
       <section className="home-section services-process">
         <div className="section-heading">
           <p className="eyebrow">Coverage notes</p>
-          <h2>Service details are confirmed when scheduling.</h2>
+          <h2>Service details are confirmed before scheduling.</h2>
         </div>
         <ol className="process-list">
           {coverageNotes.map((note) => (
@@ -74,14 +124,17 @@ export default function Page() {
       </section>
 
       <section className="final-cta">
-        <p className="eyebrow">Not sure whether your address is covered?</p>
-        <h2>Request service and include your city so the next step is clear.</h2>
+        <p className="eyebrow">Need HVAC service near Splendora?</p>
+        <h2>Call now, open Emergency HVAC, or book online and include your city.</h2>
         <div className="hero-actions">
           <a className="home-button home-button-primary" href={PHONE_HREF}>
             Call Now
           </a>
+          <Link className="home-button home-button-secondary" href="/emergency-hvac">
+            Emergency HVAC
+          </Link>
           <a className="home-button home-button-secondary" href={BOOKING_URL}>
-            Request Service
+            Book Online
           </a>
         </div>
       </section>
