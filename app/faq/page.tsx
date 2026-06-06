@@ -24,7 +24,7 @@ const faqs = [
   {
     question: "What areas do you serve?",
     answer:
-      "Kingo Services serves the Houston metro area and nearby communities including Houston, Humble, Spring, The Woodlands, Katy, Sugar Land, Cypress, Conroe, Montgomery, and Splendora.",
+      "Kingo Services operates from Splendora and serves nearby Northeast Greater Houston communities including New Caney, Porter, Cleveland, Humble, Conroe, Montgomery, The Woodlands, and Spring.",
   },
   {
     question: "Do you install new AC systems?",
@@ -34,7 +34,7 @@ const faqs = [
   {
     question: "Do you repair heating systems?",
     answer:
-      "Yes. Heating repair and heating installation support are included for Houston-area comfort needs.",
+      "Yes. Heating repair and heating installation support are included for Splendora and nearby Northeast Greater Houston comfort needs.",
   },
 ];
 
