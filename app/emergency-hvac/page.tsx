@@ -44,16 +44,15 @@ const detailsToSubmit = [
 ];
 
 const serviceAreas = [
-  "Houston",
+  "Splendora",
+  "New Caney",
+  "Porter",
+  "Cleveland",
   "Humble",
-  "Spring",
-  "The Woodlands",
-  "Katy",
-  "Sugar Land",
-  "Cypress",
   "Conroe",
   "Montgomery",
-  "Splendora",
+  "The Woodlands",
+  "Spring",
 ];
 
 export default function Page() {
@@ -65,7 +64,7 @@ export default function Page() {
           <h1>24/7 emergency HVAC intake for urgent heating and cooling issues.</h1>
           <p className="hero-text">
             Emergency HVAC intake is available 24/7 for serious residential and
-            commercial heating and cooling situations across the Houston area.
+            commercial heating and cooling situations across Splendora and nearby Northeast Greater Houston communities.
             The intake flow is designed to collect real details first so urgent
             cases can be reviewed with better focus.
           </p>
@@ -122,7 +121,7 @@ export default function Page() {
         </div>
         <div className="split-card">
           <p className="eyebrow">Emergency area coverage</p>
-          <h2>Emergency HVAC intake across Greater Houston.</h2>
+          <h2>Emergency HVAC intake from Splendora into nearby Northeast Greater Houston communities.</h2>
           <p>{serviceAreas.join(", ")}.</p>
         </div>
       </section>
