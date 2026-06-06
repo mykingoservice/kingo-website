@@ -89,16 +89,16 @@ export default function Page() {
       <section className="home-section split-section">
         <div className="split-card">
           <p className="eyebrow">Service area</p>
-          <h2>Serving the Houston metro and nearby areas.</h2>
+          <h2>Serving Splendora and nearby Northeast Greater Houston areas.</h2>
           <p>{serviceAreas.join(", ")}.</p>
         </div>
         <div className="split-card">
           <p className="eyebrow">Service focus</p>
-          <h2>Heating, cooling, maintenance, and commercial HVAC.</h2>
+          <h2>Emergency HVAC, AC repair, heating repair, maintenance, and light commercial HVAC.</h2>
           <p>
             Kingo Services handles HVAC repair, AC installation, heating repair,
-            heating installation, HVAC maintenance, commercial HVAC, and
-            emergency HVAC intake.
+            heating repair, HVAC maintenance, light commercial HVAC, and
+            emergency HVAC intake from the Splendora operating corridor.
           </p>
         </div>
       </section>
