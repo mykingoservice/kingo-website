@@ -96,9 +96,9 @@ export default function Page() {
           <p className="eyebrow">Service focus</p>
           <h2>Emergency HVAC, AC repair, heating repair, maintenance, and light commercial HVAC.</h2>
           <p>
-            Kingo Services handles HVAC repair, AC installation, heating repair,
-            heating repair, HVAC maintenance, light commercial HVAC, and
-            emergency HVAC intake from the Splendora operating corridor.
+            Kingo Services handles emergency HVAC intake, AC repair, AC installation,
+            heating repair, heating installation, HVAC maintenance, and light
+            commercial HVAC from the Splendora operating corridor.
           </p>
         </div>
       </section>
