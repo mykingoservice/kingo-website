@@ -6,16 +6,15 @@ import { BOOKING_URL, PHONE_HREF } from "../cta-links";
 const siteUrl = "https://mykingoservice.com";
 
 const serviceArea = [
-  "Houston",
-  "Humble",
-  "Kingwood",
-  "Spring",
-  "Atascocita",
-  "Porter",
-  "New Caney",
   "Splendora",
+  "New Caney",
+  "Porter",
+  "Cleveland",
+  "Humble",
   "Conroe",
   "Montgomery",
+  "The Woodlands",
+  "Spring",
 ];
 
 const coreServices = [
@@ -79,7 +78,7 @@ const internalLinks = [
   {
     href: "/service-area/",
     title: "Service Areas",
-    text: "See Greater Houston coverage and priority city pages for local HVAC service.",
+    text: "See Splendora corridor coverage and priority city pages for local HVAC service.",
   },
   {
     href: "/reviews/",
@@ -94,9 +93,9 @@ const internalLinks = [
 ];
 
 export const metadata: Metadata = {
-  title: "About Kingo Services Heating and Cooling | Houston HVAC Company",
+  title: "About Kingo Services Heating and Cooling | Splendora HVAC Company",
   description:
-    "Learn about Kingo Services Heating and Cooling, a Houston HVAC company founded by Abdiel Jesus Mata, providing residential and commercial AC repair, heating repair, installation, maintenance, and documented HVAC service across Greater Houston.",
+    "Learn about Kingo Services Heating and Cooling, a Splendora-based HVAC company founded by Abdiel Jesus Mata, providing emergency HVAC, AC repair, heating repair, installation, maintenance, and documented HVAC service across Northeast Greater Houston.",
 };
 
 const jsonLd = {
@@ -111,13 +110,13 @@ const jsonLd = {
       email: "email@mykingoservice.com",
       foundingDate: "2017",
       description:
-        "Houston-based HVAC company providing residential and commercial heating and air conditioning services across the Greater Houston metropolitan area.",
+        "Splendora-based HVAC company providing residential and light commercial heating and air conditioning services across nearby Northeast Greater Houston communities.",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "3030 W Sam Houston Pkwy S Unit 173",
-        addressLocality: "Houston",
+        streetAddress: "275 County Road 3662",
+        addressLocality: "Splendora",
         addressRegion: "TX",
-        postalCode: "77042",
+        postalCode: "77372",
         addressCountry: "US",
       },
       founder: {
@@ -183,9 +182,9 @@ export default function Page() {
           <p className="eyebrow">About Kingo</p>
           <h1>About Kingo Services Heating and Cooling</h1>
           <p className="hero-text">
-            Kingo Services Heating and Cooling is a Houston-based HVAC company
-            serving residential and commercial customers throughout the Houston
-            metropolitan area.
+            Kingo Services Heating and Cooling is a Splendora-based HVAC company
+            serving residential and light commercial customers across nearby
+            Northeast Greater Houston communities.
           </p>
           <p className="hero-text">
             Founded by Abdiel Jesus Mata, known to many customers as Jesse,
@@ -206,9 +205,9 @@ export default function Page() {
 
       <section className="home-section split-section">
         <div className="split-card">
-          <p className="eyebrow">Houston HVAC company</p>
+          <p className="eyebrow">Splendora HVAC company</p>
           <h2>Why Kingo Exists</h2>
-          <p>Air conditioning is not a luxury in Houston.</p>
+          <p>Air conditioning is not a luxury in Southeast Texas.</p>
           <p>
             For much of the year, families, businesses, property managers, and
             facility owners depend on properly functioning HVAC systems to stay
@@ -232,8 +231,8 @@ export default function Page() {
           <p>
             We provide air conditioning repair, heating repair, HVAC
             installation, preventative maintenance, airflow improvements, indoor
-            air quality solutions, and commercial HVAC services across Greater
-            Houston.
+            air quality solutions, and light commercial HVAC services across Splendora and nearby Northeast
+            Greater Houston communities.
           </p>
           <p>
             By combining hands-on field experience with modern technology,
@@ -262,7 +261,7 @@ export default function Page() {
               Jesse has worked in HVAC since 2008 and works directly in the
               field performing diagnostics, repairs, maintenance, system
               replacements, airflow improvements, and commercial HVAC service
-              throughout the Houston area.
+              throughout the Splendora corridor and nearby Northeast Greater Houston communities.
             </p>
           </div>
           <div className="service-card">
@@ -338,15 +337,15 @@ export default function Page() {
         </div>
         <div className="split-card">
           <p className="eyebrow">Service area</p>
-          <h2>Serving the Greater Houston Area</h2>
+          <h2>Serving the Splendora Corridor</h2>
           <p>
-            Kingo Services Heating and Cooling serves customers throughout the
-            Houston metropolitan area, including Houston, Humble, Kingwood,
-            Spring, Atascocita, Porter, New Caney, Splendora, Conroe,
-            Montgomery, and surrounding communities.
+            Kingo Services Heating and Cooling serves customers from the Splendora
+            operating hub into nearby communities including New Caney, Porter,
+            Cleveland, Humble, Conroe, Montgomery, The Woodlands, Spring,
+            and surrounding Northeast Greater Houston communities.
           </p>
           <p>
-            Houston&apos;s climate presents unique challenges including extreme
+            Southeast Texas climate presents unique challenges including extreme
             heat, high humidity, long cooling seasons, and heavy HVAC system
             usage. Our recommendations are made with these local conditions in
             mind.
@@ -358,7 +357,7 @@ export default function Page() {
       <section className="home-section">
         <div className="section-heading">
           <p className="eyebrow">Core Services</p>
-          <h2>HVAC services Kingo provides across Greater Houston.</h2>
+          <h2>HVAC services Kingo provides across the Splendora corridor.</h2>
         </div>
         <div className="service-grid services-overview-grid">
           {coreServices.map((service) => (
@@ -391,12 +390,12 @@ export default function Page() {
         <div className="split-card">
           <p className="eyebrow">Company Information</p>
           <h2>Kingo Services Heating and Cooling</h2>
-          <p>3030 W Sam Houston Pkwy S Unit 173, Houston, TX 77042</p>
+          <p>275 County Road 3662, Splendora, TX 77372</p>
           <p>Phone: (832) 517-1464</p>
           <p>Email: email@mykingoservice.com</p>
           <p>Website: https://mykingoservice.com</p>
           <p>Founder and Operator: Abdiel Jesus Mata</p>
-          <p>Service Area: Greater Houston Metropolitan Area</p>
+          <p>Service Area: Splendora and nearby Northeast Greater Houston communities</p>
           <p>Texas TDLR License: TACLA33837E</p>
           <p>Licensed and Insured</p>
         </div>
@@ -434,7 +433,7 @@ export default function Page() {
       </section>
 
       <section className="final-cta">
-        <p className="eyebrow">Need Houston HVAC service?</p>
+        <p className="eyebrow">Need HVAC service near Splendora?</p>
         <h2>Call Kingo Services or request HVAC service online.</h2>
         <div className="hero-actions">
           <a className="home-button home-button-primary" href={PHONE_HREF}>
