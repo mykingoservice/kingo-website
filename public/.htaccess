@@ -1,0 +1,5 @@
+RewriteEngine On
+
+Redirect 301 /job-post-pins/ /completed-job-pins/
+Redirect 301 /job-post-pins/job-2020/ /completed-job-pins/job-2020/
+Redirect 301 /job-post-pins/job-2312-sugar-land-extra-room-airflow/ /completed-job-pins/job-2312-sugar-land-extra-room-airflow/
