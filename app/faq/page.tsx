@@ -2,6 +2,26 @@ import { BOOKING_URL, PHONE_HREF } from "../cta-links";
 
 const faqs = [
   {
+    question: "Do you offer complimentary follow-up visits after a repair?",
+    answer:
+      "Yes, in some cases. When Kingo Services Heating and Cooling completes certain repairs or installations, we may offer a complimentary follow-up visit to verify system performance. Complimentary follow-up visits are based on scheduling availability and are usually performed when a technician is already working nearby. They are not guaranteed for every service call. If your system has a new issue, is leaking, dripping, not cooling, not heating, or needs troubleshooting, that would be scheduled as a diagnostic service call.",
+  },
+  {
+    question: "What is the difference between a diagnostic service call and a maintenance inspection?",
+    answer:
+      "A diagnostic service call is for a system that has a problem and needs troubleshooting. A maintenance inspection is for a system that is currently working, but the customer wants it checked for performance, safety, and potential future issues.",
+  },
+  {
+    question: "How much is a diagnostic service call?",
+    answer:
+      "Our diagnostic service call is $129. It includes system troubleshooting, evaluation, and repair recommendations. Any repair pricing is discussed and approved before work begins.",
+  },
+  {
+    question: "How much is a maintenance inspection?",
+    answer:
+      "Our maintenance inspection is $129. It is designed for systems that are operating normally but need a professional checkup before hotter or colder weather.",
+  },
+  {
     question: "Does Kingo Services handle emergency HVAC calls?",
     answer:
       "Yes. Emergency HVAC requests are handled through intake and prioritized by system status, occupant risk, property impact, and urgency.",
@@ -26,24 +46,16 @@ const faqs = [
     answer:
       "Kingo Services operates from Splendora and serves nearby Northeast Greater Houston communities including New Caney, Porter, Cleveland, Humble, Conroe, Montgomery, The Woodlands, and Spring.",
   },
-  {
-    question: "Do you install new AC systems?",
-    answer:
-      "Yes. AC installation and replacement planning are part of the service focus when repair is no longer the right long-term move.",
-  },
-  {
-    question: "Do you repair heating systems?",
-    answer:
-      "Yes. Heating repair and heating installation support are included for Splendora and nearby Northeast Greater Houston comfort needs.",
-  },
 ];
 
 const quickTopics = [
+  "Diagnostic service calls",
+  "Maintenance inspections",
+  "Follow-up visits",
   "AC repair",
   "AC installation",
   "Heating repair",
   "Heating installation",
-  "HVAC maintenance",
   "Commercial HVAC",
   "Emergency HVAC intake",
 ];
@@ -64,9 +76,9 @@ export default function Page() {
           <p className="eyebrow">FAQ</p>
           <h1>Frequently asked HVAC questions.</h1>
           <p className="hero-text">
-            Common questions about Kingo Services Heating and Cooling, emergency
-            HVAC intake, service areas, and what details to share before
-            scheduling.
+            Common questions about Kingo Services Heating and Cooling, service
+            calls, maintenance inspections, complimentary follow-up visits,
+            emergency HVAC intake, and service areas.
           </p>
           <div className="hero-actions">
             <a className="home-button home-button-primary" href={PHONE_HREF}>
@@ -81,8 +93,8 @@ export default function Page() {
 
       <section className="home-section">
         <div className="section-heading">
-          <p className="eyebrow">Answers</p>
-          <h2>What customers usually need to know first.</h2>
+          <p className="eyebrow">Service calls and follow-ups</p>
+          <h2>How scheduling works.</h2>
         </div>
         <div className="service-grid services-overview-grid">
           {faqs.map((faq) => (
@@ -109,14 +121,20 @@ export default function Page() {
 
       <section className="home-section services-process">
         <div className="section-heading">
-          <p className="eyebrow">How to move faster</p>
-          <h2>Clear requests are easier to review.</h2>
+          <p className="eyebrow">Not sure what to schedule?</p>
+          <h2>Use the condition of the system to decide.</h2>
         </div>
         <ol className="process-list">
-          <li>Describe what the system is doing.</li>
-          <li>Share whether the system is completely down or partly working.</li>
-          <li>Include whether the request is urgent or after-hours.</li>
-          <li>Use the booking flow when you want the request documented clearly.</li>
+          <li>If the system has a problem, schedule a diagnostic service call.</li>
+          <li>If the system is working normally, schedule a maintenance inspection.</li>
+          <li>
+            If Kingo recently completed work and you have a related concern,
+            contact us so we can review the best next step.
+          </li>
+          <li>
+            Complimentary follow-up visits are based on availability and are not
+            guaranteed for every appointment.
+          </li>
         </ol>
       </section>
 
