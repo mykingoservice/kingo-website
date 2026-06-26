@@ -1,4 +1,4 @@
-import { BOOKING_URL, PHONE_HREF } from "../cta-links";
+import { EMERGENCY_BOOKING_URL, PHONE_HREF } from "../cta-links";
 
 const emergencyExamples = [
   {
@@ -72,7 +72,7 @@ export default function Page() {
             <a className="home-button home-button-primary" href={PHONE_HREF}>
               Call (832) 517-1464
             </a>
-            <a className="home-button home-button-secondary" href="https://book.servicem8.com/request_service_booking?strVendorUUID=8e24b5d7-d6e5-46c8-b45e-a3d24f3cd24b#68c2fdba-5306-432d-bb7e-24417b5dc12b">
+            <a className="home-button home-button-secondary" href={EMERGENCY_BOOKING_URL}>
               Submit Emergency Intake
             </a>
           </div>
@@ -133,7 +133,7 @@ export default function Page() {
           <a className="home-button home-button-primary" href={PHONE_HREF}>
             Call (832) 517-1464
           </a>
-          <a className="home-button home-button-secondary" href="https://book.servicem8.com/request_service_booking?strVendorUUID=8e24b5d7-d6e5-46c8-b45e-a3d24f3cd24b#68c2fdba-5306-432d-bb7e-24417b5dc12b">
+          <a className="home-button home-button-secondary" href={EMERGENCY_BOOKING_URL}>
             Submit Emergency Intake
           </a>
         </div>
