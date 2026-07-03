@@ -1,6 +1,24 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { BOOKING_URL, PHONE_HREF } from "../cta-links";
+
+type JobPin = {
+  href: string;
+  jobId: string;
+  location: string;
+  city?: string;
+  state?: string;
+  service: string;
+  result?: string;
+  description: string;
+  date: string;
+  thumbnail?: string;
+  supportingLinks?: {
+    href: string;
+    label: string;
+  }[];
+};
 
 export const metadata: Metadata = {
   title: "Completed Job Pins™ — Real HVAC Proof Gallery",
@@ -8,7 +26,7 @@ export const metadata: Metadata = {
     "Learn how Kingo Services uses Completed Job Pins™ as documented HVAC proof records for completed service calls, job numbers, photos, field notes, and supporting media.",
 };
 
-const jobPins = [
+const jobPins: JobPin[] = [
   {
     href: "/completed-job-pins/job-2020/",
     jobId: "Job #2020",
@@ -37,6 +55,26 @@ const jobPins = [
       {
         href: "https://youtu.be/t8sI-eGkF9s",
         label: "Video Post Pin™",
+      },
+    ],
+  },
+  {
+    href: "/completed-job-pins/installed-turbo-200-capacitor-splendora-texas/",
+    jobId: "Job #2324",
+    location: "Splendora, TX",
+    city: "Splendora",
+    state: "Texas",
+    service: "Mini split capacitor replacement",
+    result: "Cooling restored",
+    description:
+      "Installed a Turbo 200® Mini-Oval universal capacitor on a Comfort Total 24,000 BTU mini split after the system was down. Cooling was restored.",
+    date: "2026-07-03",
+    thumbnail:
+      "/images/completed-job-pins/2324/installed-turbo-200-capacitor-splendora-texas.png",
+    supportingLinks: [
+      {
+        href: "https://youtube.com/shorts/VOOahjN8L1I?feature=share",
+        label: "Short Post Pin™",
       },
     ],
   },
@@ -132,8 +170,22 @@ export default function CompletedJobPinsIndex() {
                 <strong>{pin.jobId}</strong>
                 <span className="eyebrow" style={{ margin: 0, fontSize: "0.72rem" }}>{pin.date}</span>
               </span>
+              {pin.thumbnail ? (
+                <Image
+                  src={pin.thumbnail}
+                  alt={`${pin.jobId} ${pin.service} proof thumbnail`}
+                  width={1536}
+                  height={1024}
+                  style={{ height: "auto", marginTop: "0.75rem", width: "100%" }}
+                />
+              ) : null}
               <strong style={{ display: "block", marginTop: "0.5rem", color: "var(--brand-strong)", fontSize: "1.1rem" }}>{pin.service}</strong>
               <p style={{ marginBlock: "0.5rem" }}>{pin.location}</p>
+              {pin.result ? (
+                <p style={{ marginBlock: "0.5rem" }}>
+                  <strong>Result:</strong> {pin.result}
+                </p>
+              ) : null}
               <p>{pin.description}</p>
               {pin.supportingLinks ? (
                 <div className="city-list" style={{ marginTop: "1rem" }}>
