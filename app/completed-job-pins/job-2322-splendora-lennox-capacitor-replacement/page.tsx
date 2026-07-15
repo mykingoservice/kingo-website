@@ -157,6 +157,30 @@ export default function Page() {
         <div className="section-heading">
           <p className="eyebrow">Completed job video</p>
           <h2>Watch the field proof from Job #2322.</h2>
+          <p>
+            This YouTube Short documents the Lennox condenser fan not spinning,
+            the failed capacitor diagnosis, and the completed repair in
+            Splendora, Texas.
+          </p>
+        </div>
+
+        <div
+          style={{
+            width: "100%",
+            maxWidth: "420px",
+            margin: "0 auto 2rem",
+            aspectRatio: "9 / 16",
+          }}
+        >
+          <iframe
+            src="https://www.youtube.com/embed/GXwoENjIvbg"
+            title="Lennox AC capacitor replacement in Splendora, Texas — Kingo Job #2322"
+            width="100%"
+            height="100%"
+            style={{ border: 0, borderRadius: "18px" }}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
         </div>
 
         <div className="service-grid services-overview-grid">
