@@ -1,0 +1,351 @@
+.connectPage {
+  --connect-body-text: #42514d;
+  --connect-footer: #10211f;
+  --connect-warm-cream: #fffaf4;
+
+  min-height: 100svh;
+  background:
+    radial-gradient(
+      circle at 15% 0%,
+      var(--connect-warm-cream),
+      transparent 28rem
+    ),
+    linear-gradient(180deg, var(--background) 0%, var(--surface-muted) 100%);
+  color: var(--foreground);
+}
+
+.shell {
+  width: min(100%, 42rem);
+  margin: 0 auto;
+  padding: 1.25rem 1rem 2rem;
+}
+
+.header {
+  padding: 0.5rem 0.35rem 1.65rem;
+  text-align: center;
+}
+
+.logoLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  border-radius: 1rem;
+  text-align: left;
+}
+
+.logoLink:focus-visible,
+.action:focus-visible,
+.footer a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.logoWrap {
+  display: grid;
+  width: 4.25rem;
+  height: 4.25rem;
+  flex: 0 0 auto;
+  overflow: hidden;
+  place-items: center;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, var(--brand), var(--accent));
+  box-shadow: 0 12px 30px rgb(23 33 31 / 16%);
+}
+
+.logoWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.businessName strong,
+.businessName span {
+  display: block;
+}
+
+.businessName strong {
+  font-size: 1.08rem;
+  line-height: 1.1;
+}
+
+.businessName span {
+  margin-top: 0.25rem;
+  color: var(--connect-body-text);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.trustLine {
+  margin: 1.15rem 0 0;
+  color: var(--brand-strong);
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
+.main {
+  display: grid;
+  gap: 2.75rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.55rem;
+  color: var(--accent-strong);
+  font-size: 0.75rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.main h1,
+.main h2 {
+  margin: 0;
+  color: var(--foreground);
+  letter-spacing: -0.035em;
+}
+
+.main h1 {
+  max-width: 14ch;
+  font-size: clamp(2.2rem, 10vw, 3.75rem);
+  line-height: 0.98;
+}
+
+.main h2 {
+  font-size: clamp(1.65rem, 7vw, 2.3rem);
+  line-height: 1.05;
+}
+
+.intro {
+  max-width: 34rem;
+  margin: 0.85rem 0 1.35rem;
+  color: var(--connect-body-text);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.actions {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.action {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.85rem;
+  min-height: 5.25rem;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 1.15rem;
+  background: var(--surface);
+  box-shadow: 0 8px 24px rgb(23 33 31 / 7%);
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.action:hover {
+  border-color: var(--brand);
+  box-shadow: 0 14px 34px rgb(23 33 31 / 12%);
+  transform: translateY(-2px);
+}
+
+.primaryAction {
+  min-height: 6rem;
+  border-color: var(--brand-strong);
+  background: linear-gradient(135deg, var(--brand-strong), var(--brand));
+  color: var(--surface);
+  box-shadow: 0 16px 38px rgb(10 63 62 / 25%);
+}
+
+.primaryAction:hover {
+  border-color: var(--brand-strong);
+  box-shadow: 0 20px 42px rgb(10 63 62 / 30%);
+}
+
+.actionNumber {
+  display: grid;
+  width: 2.3rem;
+  height: 2.3rem;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--surface-muted);
+  color: var(--brand-strong);
+  font-size: 0.7rem;
+  font-weight: 850;
+  letter-spacing: 0.06em;
+}
+
+.primaryAction .actionNumber {
+  background: rgb(255 255 255 / 14%);
+  color: var(--surface);
+}
+
+.actionCopy strong,
+.actionCopy span {
+  display: block;
+}
+
+.actionCopy strong {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.actionCopy span {
+  margin-top: 0.3rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.35;
+}
+
+.primaryAction .actionCopy span {
+  color: var(--surface-muted);
+}
+
+.arrow {
+  color: var(--brand);
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+.primaryAction .arrow {
+  color: var(--surface);
+}
+
+.secondaryLinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.55rem;
+  margin-top: 1rem;
+}
+
+.secondaryLinks a {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgb(255 255 255 / 66%);
+  color: var(--brand-strong);
+  font-size: 0.78rem;
+  font-weight: 800;
+  transition:
+    border-color 160ms ease,
+    background-color 160ms ease;
+}
+
+.secondaryLinks a:hover {
+  border-color: var(--brand);
+  background: var(--surface);
+}
+
+.secondaryLinks a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.serviceArea {
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 1.35rem;
+  background: rgb(255 255 255 / 60%);
+}
+
+.serviceArea > p:not(.eyebrow) {
+  margin: 0.8rem 0 1.1rem;
+  color: var(--connect-body-text);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.serviceArea ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.serviceArea li {
+  padding: 0.48rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--brand-strong);
+  font-size: 0.78rem;
+  font-weight: 750;
+}
+
+.footer {
+  margin-top: 2.5rem;
+  padding: 1.75rem 1rem;
+  border-radius: 1.35rem;
+  background: var(--connect-footer);
+  color: var(--surface-muted);
+  text-align: center;
+}
+
+.footer p {
+  margin: 0.35rem 0;
+  font-size: 0.84rem;
+}
+
+.footer address {
+  margin: 0.85rem 0;
+  font-size: 0.8rem;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+.footer .footerName {
+  color: var(--surface);
+  font-weight: 800;
+}
+
+.footer a {
+  display: inline-block;
+  margin-top: 0.7rem;
+  border-radius: 0.3rem;
+  color: var(--surface-muted);
+  font-size: 0.88rem;
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+@media (min-width: 640px) {
+  .shell {
+    padding: 2rem 1.5rem 3rem;
+  }
+
+  .header {
+    padding-bottom: 2.25rem;
+  }
+
+  .action {
+    padding: 1.1rem 1.25rem;
+  }
+
+  .actionCopy strong {
+    font-size: 1.08rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .action {
+    transition: none;
+  }
+}
+
+:global(.site-shell:has(.connectPage) > .site-header),
+:global(.site-shell:has(.connectPage) > .site-footer),
+:global(.site-shell:has(.connectPage) > .mobile-cta-bar) {
+  display: none;
+}
