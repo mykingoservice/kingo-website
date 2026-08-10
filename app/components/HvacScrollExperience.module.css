@@ -70,11 +70,71 @@
 .stage::after {
   content: "";
   position: absolute;
+  z-index: 0;
   left: 16%;
   right: 16%;
   bottom: 10%;
   height: 1px;
   background: linear-gradient(90deg, transparent, rgb(255 255 255 / 22%), transparent);
+}
+
+.threeCanvas,
+.cssModel,
+.sceneLabels {
+  position: absolute;
+  inset: 0;
+}
+
+.threeCanvas {
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 260ms ease;
+}
+
+.threeCanvas canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.cssModel {
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  opacity: 1;
+  transition: opacity 220ms ease, transform 260ms ease;
+}
+
+.sceneLabels {
+  --progress: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.stageThreeReady .threeCanvas {
+  opacity: 1;
+}
+
+.stageThreeReady .cssModel {
+  opacity: 0;
+  transform: scale(0.985);
+}
+
+.modelBadge {
+  position: absolute;
+  z-index: 5;
+  right: 1rem;
+  top: 1rem;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid rgb(255 255 255 / 14%);
+  border-radius: 999px;
+  background: rgb(8 24 22 / 68%);
+  color: #d5e8e1;
+  font-size: 0.65rem;
+  font-weight: 850;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
 }
 
 .unit {
@@ -238,10 +298,10 @@
     translateY(calc((1 - var(--progress)) * 8px));
 }
 
-.labelFan { left: 6%; top: 11%; }
-.labelCoil { right: 3%; bottom: 20%; }
-.labelCompressor { left: 0; bottom: 11%; }
-.labelControls { right: 0; top: 29%; }
+.labelFan { left: 9%; top: 11%; }
+.labelCoil { right: 4%; bottom: 20%; }
+.labelCompressor { left: 3%; bottom: 11%; }
+.labelControls { right: 3%; top: 29%; }
 
 .steps {
   display: grid;
@@ -339,6 +399,11 @@
     padding-bottom: 0;
   }
 
+  .cta {
+    background: rgb(25 37 34 / 94%);
+    backdrop-filter: blur(12px);
+  }
+
   .step {
     min-height: 60svh;
     justify-content: flex-end;
@@ -352,7 +417,14 @@
 
   .label {
     font-size: 0.64rem;
-    opacity: clamp(0, calc((var(--progress) - 0.35) * 2.5), 1);
+    opacity: clamp(
+      0,
+      min(
+        calc((var(--progress) - 0.35) * 2.5),
+        calc((0.92 - var(--progress)) * 6)
+      ),
+      1
+    );
     transform:
       translateZ(130px)
       translateY(calc((1 - var(--progress)) * 8px));
@@ -362,6 +434,11 @@
   .labelCoil { right: 8%; }
   .labelCompressor { left: 8%; }
   .labelControls { right: 8%; }
+
+  .modelBadge {
+    right: 0.75rem;
+    top: 0.75rem;
+  }
 
   .fan {
     transform:
@@ -394,6 +471,8 @@
   .lineSet,
   .panel,
   .air,
+  .cssModel,
+  .threeCanvas,
   .step {
     transition: none;
   }
