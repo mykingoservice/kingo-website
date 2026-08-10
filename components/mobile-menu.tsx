@@ -1,6 +1,7 @@
 "use client";
 
 import { usePathname, useRouter } from "next/navigation";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -58,11 +59,13 @@ export function MobileMenu({ items }: { items: NavItem[] }) {
             </div>
 
             <div className="mobile-menu-brand">
-              <img
+              <Image
                 className="mobile-menu-logo"
                 src="/kingo-favicon.png"
                 alt=""
                 aria-hidden="true"
+                width={42}
+                height={42}
               />
               <div>
                 <strong>Kingo Services</strong>

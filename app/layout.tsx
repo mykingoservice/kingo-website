@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
 import { BOOKING_URL, PHONE_HREF } from "./cta-links";
@@ -6,6 +7,7 @@ import { MobileMenu } from "../components/mobile-menu";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mykingoservice.com"),
   title: {
     default: "Kingo Services Heating and Cooling",
     template: "%s | Kingo Services Heating and Cooling",
@@ -88,7 +90,7 @@ export default function RootLayout({
             <div className="nav-wrap">
               <Link className="brand" href="/" aria-label="Kingo Services home">
                 <span className="brand-mark" aria-hidden="true">
-                  <img src="/kingo-favicon.png" alt="" />
+                  <Image src="/kingo-favicon.png" alt="" width={42} height={42} />
                 </span>
                 <span>
                   <span className="brand-name">Kingo Services</span>
@@ -120,7 +122,7 @@ export default function RootLayout({
             <div className="footer-brand">
               <Link className="brand" href="/" aria-label="Kingo Services home">
                 <span className="brand-mark" aria-hidden="true">
-                  <img src="/kingo-favicon.png" alt="" />
+                  <Image src="/kingo-favicon.png" alt="" width={42} height={42} />
                 </span>
                 <span>
                   <span className="brand-name">Kingo Services</span>
