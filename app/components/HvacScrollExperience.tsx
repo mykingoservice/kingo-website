@@ -29,6 +29,8 @@ const steps = [
 
 export default function HvacScrollExperience() {
   const sectionRef = useRef<HTMLElement>(null);
+  const storyRef = useRef<HTMLDivElement>(null);
+  const stageRef = useRef<HTMLDivElement>(null);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -37,11 +39,18 @@ export default function HvacScrollExperience() {
     const update = () => {
       frame = 0;
       const section = sectionRef.current;
-      if (!section) return;
+      const story = storyRef.current;
+      const stage = stageRef.current;
+      if (!section || !story || !stage) return;
 
-      const rect = section.getBoundingClientRect();
-      const travel = Math.max(1, rect.height - window.innerHeight);
-      const raw = -rect.top / travel;
+      const header = document.querySelector<HTMLElement>(".site-header");
+      const stickyTop = (header?.getBoundingClientRect().height ?? 104) + 16;
+      section.style.setProperty("--sticky-top", `${stickyTop}px`);
+
+      const storyRect = story.getBoundingClientRect();
+      const stageHeight = stage.getBoundingClientRect().height;
+      const travel = Math.max(1, storyRect.height - stageHeight);
+      const raw = (stickyTop - storyRect.top) / travel;
       setProgress(Math.min(1, Math.max(0, raw)));
     };
 
@@ -76,8 +85,8 @@ export default function HvacScrollExperience() {
           </p>
         </div>
 
-        <div className={styles.story}>
-          <div className={styles.stage} aria-hidden="true">
+        <div className={styles.story} ref={storyRef}>
+          <div className={styles.stage} ref={stageRef} aria-hidden="true">
             <div className={styles.unit} style={unitStyle}>
               <div className={styles.air} />
               <div className={styles.cabinet} />

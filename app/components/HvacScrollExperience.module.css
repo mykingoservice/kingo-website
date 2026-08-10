@@ -51,8 +51,9 @@
 
 .stage {
   position: sticky;
-  top: 7.5rem;
-  min-height: 34rem;
+  top: var(--sticky-top, 7.5rem);
+  z-index: 2;
+  height: clamp(26rem, calc(100svh - var(--sticky-top, 7.5rem) - 1.5rem), 34rem);
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -60,7 +61,8 @@
   border-radius: 2rem;
   background:
     radial-gradient(circle at 50% 38%, rgb(15 92 90 / 26%), transparent 14rem),
-    linear-gradient(180deg, rgb(255 255 255 / 5%), rgb(255 255 255 / 2%));
+    linear-gradient(180deg, rgb(255 255 255 / 5%), rgb(255 255 255 / 2%)),
+    #10211f;
   box-shadow: 0 30px 90px rgb(0 0 0 / 28%);
   perspective: 1100px;
 }
@@ -191,7 +193,7 @@
   border-right: 8px solid #c27e46;
   border-bottom: 8px solid #c27e46;
   border-radius: 0 0 1.5rem 0;
-  transform: translate3d(calc(var(--progress) * 155px), calc(var(--progress) * -10px), calc(var(--progress) * 105px));
+  transform: translate3d(calc(var(--progress) * 145px), calc(var(--progress) * -10px), calc(var(--progress) * 105px));
 }
 
 .panel {
@@ -204,7 +206,7 @@
   background:
     linear-gradient(90deg, transparent 45%, #c84a2b 45% 55%, transparent 55%),
     #c9d5d1;
-  transform: translate3d(calc(var(--progress) * 170px), calc(var(--progress) * -85px), calc(var(--progress) * 165px));
+  transform: translate3d(calc(var(--progress) * 150px), calc(var(--progress) * -85px), calc(var(--progress) * 165px));
 }
 
 .air {
@@ -231,7 +233,9 @@
   font-weight: 800;
   box-shadow: 0 10px 28px rgb(0 0 0 / 22%);
   opacity: calc(var(--progress) * 1.5);
-  transform: translateY(calc((1 - var(--progress)) * 8px));
+  transform:
+    translateZ(240px)
+    translateY(calc((1 - var(--progress)) * 8px));
 }
 
 .labelFan { left: 6%; top: 11%; }
@@ -325,19 +329,60 @@
   }
 
   .stage {
-    position: relative;
-    top: auto;
-    min-height: 27rem;
+    height: clamp(17rem, 40svh, 21rem);
+    border-radius: 1.25rem;
   }
 
   .steps {
+    position: relative;
+    z-index: 3;
     padding-bottom: 0;
   }
 
   .step {
-    min-height: auto;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    min-height: 60svh;
+    justify-content: flex-end;
+    padding: 1.25rem 1rem 6rem 1.25rem;
+    background: linear-gradient(180deg, transparent 24%, rgb(16 33 31 / 78%) 52%, #10211f 74%);
+  }
+
+  .unit {
+    width: min(18rem, 70vw);
+  }
+
+  .label {
+    font-size: 0.64rem;
+    opacity: clamp(0, calc((var(--progress) - 0.35) * 2.5), 1);
+    transform:
+      translateZ(130px)
+      translateY(calc((1 - var(--progress)) * 8px));
+  }
+
+  .labelFan { left: 10%; }
+  .labelCoil { right: 8%; }
+  .labelCompressor { left: 8%; }
+  .labelControls { right: 8%; }
+
+  .fan {
+    transform:
+      translate3d(calc(var(--progress) * -70px), calc(var(--progress) * -46px), calc(var(--progress) * 80px))
+      rotate(calc(var(--progress) * 55deg));
+  }
+
+  .coil {
+    transform: translate3d(calc(var(--progress) * 65px), calc(var(--progress) * 28px), calc(var(--progress) * 65px));
+  }
+
+  .compressor {
+    transform: translate3d(calc(var(--progress) * -70px), calc(var(--progress) * 45px), calc(var(--progress) * 90px));
+  }
+
+  .lineSet {
+    transform: translate3d(calc(var(--progress) * 50px), calc(var(--progress) * -7px), calc(var(--progress) * 70px));
+  }
+
+  .panel {
+    transform: translate3d(calc(var(--progress) * 70px), calc(var(--progress) * -50px), calc(var(--progress) * 100px));
   }
 }
 
