@@ -1,8 +1,13 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import Link from "next/link";
-import { CSSProperties, useEffect, useRef, useState } from "react";
+import { CSSProperties, useCallback, useEffect, useRef, useState } from "react";
 import styles from "./HvacScrollExperience.module.css";
+
+const HvacThreeScene = dynamic(() => import("./HvacThreeScene"), {
+  ssr: false,
+});
 
 const steps = [
   {
@@ -32,6 +37,10 @@ export default function HvacScrollExperience() {
   const storyRef = useRef<HTMLDivElement>(null);
   const stageRef = useRef<HTMLDivElement>(null);
   const [progress, setProgress] = useState(0);
+  const [loadThree, setLoadThree] = useState(false);
+  const [sceneActive, setSceneActive] = useState(false);
+  const [threeReady, setThreeReady] = useState(false);
+  const [threeUnavailable, setThreeUnavailable] = useState(false);
 
   useEffect(() => {
     let frame = 0;
@@ -69,6 +78,40 @@ export default function HvacScrollExperience() {
     };
   }, []);
 
+  useEffect(() => {
+    const stage = stageRef.current;
+    if (!stage) return;
+
+    if (!("IntersectionObserver" in window)) {
+      const timer = globalThis.setTimeout(() => {
+        setLoadThree(true);
+        setSceneActive(true);
+      }, 0);
+      return () => globalThis.clearTimeout(timer);
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setSceneActive(entry.isIntersecting);
+        if (entry.isIntersecting) setLoadThree(true);
+      },
+      { rootMargin: "320px 0px" },
+    );
+
+    observer.observe(stage);
+    return () => observer.disconnect();
+  }, []);
+
+  const handleThreeReady = useCallback(() => {
+    setThreeReady(true);
+    setThreeUnavailable(false);
+  }, []);
+
+  const handleThreeUnavailable = useCallback(() => {
+    setThreeReady(false);
+    setThreeUnavailable(true);
+  }, []);
+
   const activeStep = Math.min(steps.length - 1, Math.floor(progress * steps.length));
   const unitStyle = { "--progress": progress } as CSSProperties;
 
@@ -86,20 +129,43 @@ export default function HvacScrollExperience() {
         </div>
 
         <div className={styles.story} ref={storyRef}>
-          <div className={styles.stage} ref={stageRef} aria-hidden="true">
-            <div className={styles.unit} style={unitStyle}>
-              <div className={styles.air} />
-              <div className={styles.cabinet} />
-              <div className={styles.fan} />
-              <div className={styles.coil} />
-              <div className={styles.compressor} />
-              <div className={styles.lineSet} />
-              <div className={styles.panel} />
+          <div
+            className={`${styles.stage} ${threeReady ? styles.stageThreeReady : ""}`}
+            ref={stageRef}
+            aria-hidden="true"
+          >
+            {loadThree && !threeUnavailable ? (
+              <div className={styles.threeCanvas}>
+                <HvacThreeScene
+                  active={sceneActive}
+                  activeStep={activeStep}
+                  onReady={handleThreeReady}
+                  onUnavailable={handleThreeUnavailable}
+                  progress={progress}
+                />
+              </div>
+            ) : null}
+
+            <div className={styles.cssModel}>
+              <div className={styles.unit} style={unitStyle}>
+                <div className={styles.air} />
+                <div className={styles.cabinet} />
+                <div className={styles.fan} />
+                <div className={styles.coil} />
+                <div className={styles.compressor} />
+                <div className={styles.lineSet} />
+                <div className={styles.panel} />
+              </div>
+            </div>
+
+            <div className={styles.sceneLabels} style={unitStyle}>
               <span className={`${styles.label} ${styles.labelFan}`}>Condenser fan</span>
               <span className={`${styles.label} ${styles.labelCoil}`}>Condenser coil</span>
               <span className={`${styles.label} ${styles.labelCompressor}`}>Compressor</span>
               <span className={`${styles.label} ${styles.labelControls}`}>Electrical controls</span>
             </div>
+
+            {threeReady ? <span className={styles.modelBadge}>Live 3D model</span> : null}
           </div>
 
           <div className={styles.steps}>
