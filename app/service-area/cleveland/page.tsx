@@ -33,7 +33,7 @@ export default function Page() {
             Kingo Services Heating and Cooling serves Cleveland, Texas with emergency HVAC intake, AC repair, heating repair, maintenance, and practical comfort planning from the Splendora operating hub.
           </p>
           <p className="mt-4 max-w-3xl text-slate-700">
-            Cleveland is north of the Splendora operating hub and is part of Kingo's nearby backyard service area for profitable HVAC calls.
+            Cleveland is north of the Splendora operating hub and is part of Kingo’s nearby backyard service area for profitable HVAC calls.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a

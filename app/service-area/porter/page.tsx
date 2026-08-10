@@ -33,7 +33,7 @@ export default function Page() {
             Kingo Services Heating and Cooling serves Porter, Texas with emergency HVAC intake, AC repair, heating repair, maintenance, and practical comfort planning from the Splendora operating hub.
           </p>
           <p className="mt-4 max-w-3xl text-slate-700">
-            Porter is one of Kingo's primary nearby service areas between Splendora, New Caney, and Kingwood.
+            Porter is one of Kingo’s primary nearby service areas between Splendora, New Caney, and Kingwood.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
