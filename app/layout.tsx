@@ -89,13 +89,14 @@ export default function RootLayout({
 
             <div className="nav-wrap">
               <Link className="brand" href="/" aria-label="Kingo Services home">
-                <span className="brand-mark" aria-hidden="true">
-                  <Image src="/kingo-favicon.png" alt="" width={42} height={42} />
-                </span>
-                <span>
-                  <span className="brand-name">Kingo Services</span>
-                  <span className="brand-line">Heating and Cooling</span>
-                </span>
+                <Image
+                  className="brand-logo"
+                  src="/kingo-logo.webp"
+                  alt="Kingo Services Heating and Cooling"
+                  width={1150}
+                  height={404}
+                  preload
+                />
               </Link>
 
               <nav className="primary-nav" aria-label="Primary navigation">
@@ -121,13 +122,13 @@ export default function RootLayout({
           <footer className="site-footer">
             <div className="footer-brand">
               <Link className="brand" href="/" aria-label="Kingo Services home">
-                <span className="brand-mark" aria-hidden="true">
-                  <Image src="/kingo-favicon.png" alt="" width={42} height={42} />
-                </span>
-                <span>
-                  <span className="brand-name">Kingo Services</span>
-                  <span className="brand-line">Heating and Cooling</span>
-                </span>
+                <Image
+                  className="brand-logo"
+                  src="/kingo-logo.webp"
+                  alt="Kingo Services Heating and Cooling"
+                  width={1150}
+                  height={404}
+                />
               </Link>
               <p>
                 Emergency HVAC, AC repair, heating repair, maintenance, and

@@ -61,16 +61,11 @@ export function MobileMenu({ items }: { items: NavItem[] }) {
             <div className="mobile-menu-brand">
               <Image
                 className="mobile-menu-logo"
-                src="/kingo-favicon.png"
-                alt=""
-                aria-hidden="true"
-                width={42}
-                height={42}
+                src="/kingo-logo.webp"
+                alt="Kingo Services Heating and Cooling"
+                width={1150}
+                height={404}
               />
-              <div>
-                <strong>Kingo Services</strong>
-                <span>Heating and Cooling</span>
-              </div>
             </div>
 
             <h2>Menu</h2>
