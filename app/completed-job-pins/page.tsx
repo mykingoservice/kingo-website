@@ -41,7 +41,7 @@ const jobPins: JobPin[] = [
       "Diagnosed a no-cool Carrier condenser, replaced the failed dual-run capacitor with a Titan HD 45/5 µF capacitor, and checked condenser fan and compressor amperage after the repair.",
     date: "2026-07-21",
     thumbnail:
-      "/images/completed-job-pins/2333/job-2333-pearland-carrier-capacitor-replacement.jpg",
+      "https://i.ytimg.com/vi/VVT1MEypzWU/maxresdefault.jpg",
     thumbnailWidth: 1280,
     thumbnailHeight: 720,
     supportingLinks: [
@@ -231,17 +231,35 @@ export default function CompletedJobPinsIndex() {
                 </span>
               </span>
               {pin.thumbnail ? (
-                <Image
-                  src={pin.thumbnail}
-                  alt={`${pin.jobId} ${pin.service} proof thumbnail`}
-                  width={pin.thumbnailWidth ?? 1536}
-                  height={pin.thumbnailHeight ?? 1024}
-                  style={{
-                    height: "auto",
-                    marginTop: "0.75rem",
-                    width: "100%",
-                  }}
-                />
+                pin.thumbnail.startsWith("http") ? (
+                  <>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={pin.thumbnail}
+                      alt={`${pin.jobId} ${pin.service} proof thumbnail`}
+                      width={pin.thumbnailWidth ?? 1280}
+                      height={pin.thumbnailHeight ?? 720}
+                      loading="lazy"
+                      style={{
+                        height: "auto",
+                        marginTop: "0.75rem",
+                        width: "100%",
+                      }}
+                    />
+                  </>
+                ) : (
+                  <Image
+                    src={pin.thumbnail}
+                    alt={`${pin.jobId} ${pin.service} proof thumbnail`}
+                    width={pin.thumbnailWidth ?? 1536}
+                    height={pin.thumbnailHeight ?? 1024}
+                    style={{
+                      height: "auto",
+                      marginTop: "0.75rem",
+                      width: "100%",
+                    }}
+                  />
+                )
               ) : null}
               <strong
                 style={{
