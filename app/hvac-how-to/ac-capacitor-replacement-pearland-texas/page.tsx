@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { BOOKING_URL, PHONE_HREF } from "../../cta-links";
 
@@ -8,8 +7,8 @@ const title =
 const canonicalPath = "/hvac-how-to/ac-capacitor-replacement-pearland-texas/";
 const jobPinPath =
   "/completed-job-pins/job-2333-pearland-carrier-capacitor-replacement/";
-const imagePath =
-  "/images/completed-job-pins/2333/job-2333-pearland-carrier-capacitor-replacement.jpg";
+const imageUrl =
+  "https://i.ytimg.com/vi/VVT1MEypzWU/maxresdefault.jpg";
 const fullVideoUrl = "https://youtu.be/VVT1MEypzWU";
 const shortVideoUrl = "https://youtube.com/shorts/YYpwchnQasw";
 
@@ -36,7 +35,7 @@ export const metadata: Metadata = {
     url: canonicalPath,
     images: [
       {
-        url: imagePath,
+        url: imageUrl,
         width: 1280,
         height: 720,
         alt: "Carrier AC capacitor replacement in Pearland, Texas by Kingo Services",
@@ -49,7 +48,7 @@ export const metadata: Metadata = {
     title,
     description:
       "Real Pearland HVAC field work: failed Carrier capacitor replaced and condenser operation checked.",
-    images: [imagePath],
+    images: [imageUrl],
   },
 };
 
@@ -84,7 +83,7 @@ const articleSchema = {
     "A real Carrier AC capacitor replacement in Pearland, Texas, documented by Kingo Services Heating and Cooling.",
   datePublished: "2026-08-14",
   dateModified: "2026-08-14",
-  image: `https://mykingoservice.com${imagePath}`,
+  image: imageUrl,
   mainEntityOfPage: `https://mykingoservice.com${canonicalPath}`,
   author: {
     "@type": "Organization",
@@ -132,13 +131,14 @@ export default function Page() {
       </section>
 
       <section className="home-section">
-        <Image
-          src={imagePath}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={imageUrl}
           alt="Kingo Services technician presenting the replacement capacitor used on Carrier AC Job #2333 in Pearland, Texas"
           width={1280}
           height={720}
+          loading="eager"
           style={{ borderRadius: "18px", height: "auto", width: "100%" }}
-          preload
         />
       </section>
 
