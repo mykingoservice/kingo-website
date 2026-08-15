@@ -21,12 +21,13 @@ const legacyCities = [
   { href: "/service-area/cypress", label: "Cypress" },
   { href: "/service-area/katy", label: "Katy" },
   { href: "/service-area/sugar-land", label: "Sugar Land" },
+  { href: "/service-area/pearland", label: "Pearland" },
 ];
 
 const coverageNotes = [
   "Kingo operates from Splendora and prioritizes nearby Northeast Greater Houston service calls.",
   "Emergency and after-hours availability depends on location, schedule, and current call volume.",
-  "Any emergency or after-hours dispatch charges are explained before the appointment is confirmed.",
+  "Any emergency, after-hours, or long-distance dispatch charges are explained before the appointment is confirmed.",
 ];
 
 export default function Page() {
@@ -35,19 +36,25 @@ export default function Page() {
       <section className="home-section services-hero">
         <div>
           <p className="eyebrow">Northeast Greater Houston service area</p>
-          <h1>HVAC service from Splendora into nearby Northeast Greater Houston communities.</h1>
+          <h1>
+            HVAC service from Splendora into nearby Northeast Greater Houston
+            communities.
+          </h1>
           <p className="hero-text">
             Kingo Services Heating and Cooling operates from Splendora and
             serves nearby communities including New Caney, Porter, Cleveland,
-            Humble, Conroe, Montgomery, The Woodlands, and Spring. Emergency
-            HVAC, AC repair, heating repair, maintenance, and light commercial
-            HVAC service are available when schedule and location allow.
+            Humble, Conroe, Montgomery, The Woodlands, and Spring. Selected
+            service calls in Houston, Cypress, Katy, Sugar Land, and Pearland are
+            accepted when schedule, distance, and job fit make sense.
           </p>
           <div className="hero-actions">
             <a className="home-button home-button-primary" href={PHONE_HREF}>
               Call Now
             </a>
-            <Link className="home-button home-button-secondary" href="/emergency-hvac">
+            <Link
+              className="home-button home-button-secondary"
+              href="/emergency-hvac"
+            >
               Emergency HVAC
             </Link>
             <a className="home-button home-button-secondary" href={BOOKING_URL}>
@@ -96,10 +103,11 @@ export default function Page() {
       <section className="home-section area-overview-section">
         <div className="section-heading">
           <p className="eyebrow">Other served areas by availability</p>
-          <h2>Legacy markets are still served when the job fits.</h2>
+          <h2>Greater Houston markets are served when the job fits.</h2>
           <p>
-            Kingo may still serve Houston and other larger Greater Houston
-            markets when scheduling, distance, and job type make sense.
+            Kingo may serve Houston and other larger Greater Houston markets
+            when scheduling, distance, and job type make sense. Availability is
+            confirmed before dispatch.
           </p>
         </div>
         <div className="city-card-grid">
@@ -125,12 +133,17 @@ export default function Page() {
 
       <section className="final-cta">
         <p className="eyebrow">Need HVAC service near Splendora?</p>
-        <h2>Call now, open Emergency HVAC, or book online and include your city.</h2>
+        <h2>
+          Call now, open Emergency HVAC, or book online and include your city.
+        </h2>
         <div className="hero-actions">
           <a className="home-button home-button-primary" href={PHONE_HREF}>
             Call Now
           </a>
-          <Link className="home-button home-button-secondary" href="/emergency-hvac">
+          <Link
+            className="home-button home-button-secondary"
+            href="/emergency-hvac"
+          >
             Emergency HVAC
           </Link>
           <a className="home-button home-button-secondary" href={BOOKING_URL}>
