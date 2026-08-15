@@ -73,7 +73,7 @@ export default function Home() {
 
       <section className="home-section split-section">
         <div className="split-card"><p className="eyebrow">Emergency HVAC</p><h2>Emergency and after-hours HVAC intake for serious heating and cooling issues.</h2><p>Start emergency intake when the system is down, comfort risk is rising, or the situation needs faster review and prioritization.</p><Link href="/emergency-hvac">Open Emergency HVAC</Link></div>
-        <div className="split-card"><p className="eyebrow">Proof-based HVAC work</p><h2>Real jobs, reviews, photos, and service-area proof build the authority.</h2><p>Kingo is building local SEO through real HVAC work, Job Post Pins™, reviews, videos, and service-area pages instead of generic city-page fluff.</p><Link href="/job-post-pins">View Recent Work</Link></div>
+        <div className="split-card"><p className="eyebrow">Proof-based HVAC work</p><h2>Real jobs, reviews, photos, and service-area proof build the authority.</h2><p>Kingo is building local SEO through real HVAC work, Completed Job Pins™, reviews, videos, and service-area pages instead of generic city-page fluff.</p><Link href="/completed-job-pins">View Recent Work</Link></div>
       </section>
 
       <section className="final-cta">
