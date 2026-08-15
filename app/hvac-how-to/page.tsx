@@ -2,12 +2,17 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "HVAC How-To Videos",
+  title: "HVAC How-To Videos and Field Walkthroughs",
   description:
-    "HVAC how-to videos from Kingo Services covering airflow, comfort, AC, ductwork, and Houston HVAC service topics.",
+    "HVAC how-to videos and real field walkthroughs from Kingo Services covering AC repair, capacitors, airflow, comfort, ductwork, and Houston-area service topics.",
 };
 
 const videos = [
+  {
+    href: "/hvac-how-to/ac-capacitor-replacement-pearland-texas/",
+    title: "Carrier AC Capacitor Replacement in Pearland, Texas",
+    text: "A real no-cool service call showing how Kingo diagnosed a failed 45/5 µF dual-run capacitor, replaced it, and checked condenser operation on Job #2333.",
+  },
   {
     href: "/hvac-how-to/how-to-add-airflow-to-an-extra-room/",
     title: "How To Add Airflow To An Extra Room Using One Existing Duct",
@@ -19,7 +24,9 @@ const topicLinks = [
   { href: "/services/ac-repair/", label: "AC Repair" },
   { href: "/services/hvac-maintenance/", label: "HVAC Maintenance" },
   { href: "/services/ac-installation/", label: "AC Installation" },
+  { href: "/service-area/pearland/", label: "Pearland HVAC Service" },
   { href: "/service-area/houston/", label: "Houston HVAC Service" },
+  { href: "/completed-job-pins/", label: "Completed Job Pins™" },
   { href: "/contact/", label: "Contact Kingo" },
 ];
 
@@ -29,19 +36,19 @@ export default function Page() {
       <section className="home-section services-hero">
         <div>
           <p className="eyebrow">HVAC How-To Videos</p>
-          <h1>Practical HVAC airflow and comfort videos for Houston-area homes.</h1>
+          <h1>Practical HVAC repair, airflow, and comfort videos.</h1>
           <p className="hero-text">
-            Browse Kingo HVAC how-to content for common comfort questions like
-            rooms not getting enough air, adding airflow to an extra room, and
-            understanding when ductwork should be reviewed by a contractor.
+            Browse Kingo HVAC how-to content and real field walkthroughs for
+            common comfort problems, including no-cool calls, failed capacitors,
+            rooms not getting enough air, and ductwork modifications.
           </p>
         </div>
       </section>
 
       <section className="home-section">
         <div className="section-heading">
-          <p className="eyebrow">Featured how-to</p>
-          <h2>Start with airflow to an extra room.</h2>
+          <p className="eyebrow">Featured walkthroughs</p>
+          <h2>Start with real Kingo field work.</h2>
         </div>
         <div className="service-grid services-overview-grid">
           {videos.map((video) => (
@@ -56,7 +63,7 @@ export default function Page() {
       <section className="home-section services-process">
         <div className="section-heading">
           <p className="eyebrow">Related HVAC topics</p>
-          <h2>Connect the video library to service pages.</h2>
+          <h2>Connect the video library to service and proof pages.</h2>
         </div>
         <div className="city-list" aria-label="Related HVAC service links">
           {topicLinks.map((link) => (
