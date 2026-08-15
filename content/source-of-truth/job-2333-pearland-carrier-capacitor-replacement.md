@@ -4,9 +4,17 @@
 
 - ServiceM8 facts verified from the supplied job record.
 - Long-form and short-form assets were published before the website pages.
-- Canonical website paths are final and become public after the implementation is merged and deployed.
+- Canonical website pages were published through PR #10 and deployed successfully by Vercel on August 14, 2026.
+- Finalization PR #13 passed the Vercel preview build and standardizes the approved local thumbnail plus the homepage link to the canonical Completed Job Pins™ index.
 - No verified customer review was supplied for this job, so no job-specific review is claimed.
 - The general Kingo Google review-request link may be used without implying that a review belongs to Job #2333.
+
+## Published Log
+
+- 2026-08-14 — Full YouTube video, YouTube Short, TikTok, Instagram Reel, Facebook Reel, X post, and Threads post recorded in the source of truth.
+- 2026-08-14 — Completed Job Pin™, supporting HVAC blog, Pearland service-area page, indexes, approved thumbnail, metadata, and internal links published through PR #10.
+- 2026-08-14 — Final production cleanup prepared through PR #13: homepage proof link aligned to `/completed-job-pins/`, and approved local thumbnail used by the blog and Completed Job Pins™ index.
+- Remaining distribution action — Update each platform description, caption, pinned comment, reply, or profile-link destination with the canonical website URLs where the platform permits editing.
 
 ## Verified job facts
 
@@ -243,4 +251,4 @@ https://youtu.be/VVT1MEypzWU
 - [ ] Reply to or repost the Threads asset with the canonical Completed Job Pin™ URL because original posts may not be editable.
 - [ ] Publish a Google Business Profile job post when the approved photo and link are ready.
 - [ ] Verify all website, video, social, service, service-area, and review-request links.
-- [ ] Add completion date and final URLs to the Published Log.
+- [x] Add completion date and final URLs to the Published Log.
