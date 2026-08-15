@@ -4,7 +4,9 @@
 
 - ServiceM8 facts verified from the supplied job record.
 - Long-form and short-form assets were published before the website pages.
-- Canonical website paths are final and become public after the implementation is merged and deployed.
+- Website implementation merged to `main` through PR #10 on August 14, 2026.
+- Vercel reported a successful production deployment for merge commit `8ec368dda8738fd95de19b0e3d0a2036425c1e04`.
+- Canonical website paths are final; direct production route and mobile visual verification remain the last website QA gate.
 - No verified customer review was supplied for this job, so no job-specific review is claimed.
 - The general Kingo Google review-request link may be used without implying that a review belongs to Job #2333.
 
@@ -231,7 +233,9 @@ https://youtu.be/VVT1MEypzWU
 
 ## Distribution update checklist
 
+- [x] Merge the Job #2333 website system and receive a successful Vercel production deployment.
 - [ ] Confirm all three website URLs return HTTP 200 after production deployment.
+- [ ] Check the Completed Job Pin™, blog, and Pearland pages on desktop and mobile.
 - [ ] Update the long-form YouTube description.
 - [ ] Replace the long-form YouTube pinned comment.
 - [ ] Update the YouTube Short description.
