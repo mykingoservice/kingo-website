@@ -1,10 +1,24 @@
 import type { Metadata } from "next";
+import { Barlow_Condensed, Inter } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
 import { BOOKING_URL, PHONE_HREF } from "./cta-links";
 import { MobileMenu } from "../components/mobile-menu";
 import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const barlowCondensed = Barlow_Condensed({
+  subsets: ["latin"],
+  weight: ["700", "800", "900"],
+  variable: "--font-barlow-condensed",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mykingoservice.com"),
@@ -74,7 +88,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased">
+    <html
+      lang="en"
+      className={`${inter.variable} ${barlowCondensed.variable} h-full antialiased`}
+    >
       <body className="min-h-full">
         <div className="site-shell">
           <a className="skip-link" href="#main-content">
