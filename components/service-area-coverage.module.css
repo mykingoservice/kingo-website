@@ -78,7 +78,7 @@
   stroke: #f7f4ef;
   stroke-width: 7px;
   paint-order: stroke;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
   font-size: 25px;
   font-weight: 800;
   letter-spacing: -0.02em;
@@ -103,7 +103,7 @@
 .routeText {
   fill: #ffffff;
   stroke: none;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
   font-size: 19px;
   font-weight: 850;
 }
@@ -127,7 +127,7 @@
 
 .pinLetter {
   fill: #17211f;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
   font-size: 48px;
   font-weight: 900;
 }

@@ -14,12 +14,21 @@
   --shadow: 0 18px 48px rgb(15 92 90 / 12%);
   --shadow-strong: 0 28px 80px rgb(15 33 31 / 16%);
   --ring-soft: 0 0 0 1px rgb(255 255 255 / 62%) inset;
+  --type-hero: clamp(2.5rem, 7vw, 4.5rem);
+  --type-page-heading: clamp(2.25rem, 6vw, 4rem);
+  --type-section-heading: clamp(1.9rem, 5vw, 3.25rem);
+  --type-card-heading: clamp(1.125rem, 2vw, 1.375rem);
+  --type-body-large: clamp(1.05rem, 2.4vw, 1.25rem);
+  --type-body: 1rem;
+  --type-small: 0.86rem;
+  --type-label: 0.78rem;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: Arial, Helvetica, sans-serif;
+  --font-sans: var(--font-inter), Arial, Helvetica, sans-serif;
+  --font-heading: var(--font-barlow-condensed), "Arial Narrow", Arial, sans-serif;
   --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
 
@@ -37,7 +46,40 @@ body {
     radial-gradient(circle at top right, rgb(232 240 236 / 85%) 0, transparent 28rem),
     var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+  font-size: var(--type-body);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.eyebrow,
+.hero-panel span,
+.service-card span,
+.city-card-grid a,
+.mobile-menu-appbar strong {
+  font-family: var(--font-barlow-condensed), "Arial Narrow", Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800;
+  text-wrap: balance;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
 }
 
 a {
@@ -267,7 +309,7 @@ a {
   border-top: 1px solid rgb(255 255 255 / 14%);
   margin-top: 0.75rem;
   padding-top: 1.25rem;
-  font-size: 0.86rem;
+  font-size: var(--type-small);
 }
 
 .footer-bottom p {
@@ -332,7 +374,7 @@ a {
 .eyebrow {
   margin: 0 0 0.85rem;
   color: var(--accent-strong);
-  font-size: 0.78rem;
+  font-size: var(--type-label);
   font-weight: 850;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -349,16 +391,16 @@ a {
 
 .home-hero h1 {
   max-width: 52rem;
-  font-size: clamp(2.55rem, 8vw, 5.35rem);
-  line-height: 0.95;
-  letter-spacing: -0.055em;
+  font-size: var(--type-hero);
+  line-height: 0.98;
+  letter-spacing: -0.035em;
 }
 
 .services-hero h1 {
   max-width: 54rem;
   margin: 0;
   color: var(--foreground);
-  font-size: clamp(2.25rem, 7vw, 4.5rem);
+  font-size: var(--type-page-heading);
   font-weight: 850;
   letter-spacing: 0;
   line-height: 1;
@@ -377,7 +419,7 @@ a {
   max-width: 42rem;
   margin: 1.35rem 0 0;
   color: #42514d;
-  font-size: clamp(1.05rem, 2.4vw, 1.25rem);
+  font-size: var(--type-body-large);
   line-height: 1.7;
 }
 
@@ -455,7 +497,7 @@ a {
 
 .hero-panel span {
   color: var(--muted);
-  font-size: 0.78rem;
+  font-size: var(--type-label);
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -479,7 +521,7 @@ a {
 
 .home-section h2,
 .final-cta h2 {
-  font-size: clamp(1.9rem, 5vw, 3.25rem);
+  font-size: var(--type-section-heading);
   line-height: 1.05;
 }
 
@@ -525,7 +567,8 @@ a {
 
 .service-card span {
   color: var(--foreground);
-  font-size: 1.05rem;
+  font-size: var(--type-card-heading);
+  line-height: 1.2;
 }
 
 .service-card p {
