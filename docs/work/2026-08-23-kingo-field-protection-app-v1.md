@@ -1,112 +1,188 @@
-# Kingo Field Protection App V1
+# Kingo Dispatch V1
 
 ## Objective
-Build a mobile-first Kingo field application for technicians at `app.mykingoservice.com`.
+Build a desktop-first, phone-responsive Kingo field-service application at `dispatch.kingodigital.com`.
 
-The app turns a ServiceM8 job into a structured preventive-maintenance inspection, maps evidence-based findings to approved Kingo price-book items, checks truck inventory before presenting same-day recommendations, and records customer membership/protection status.
+The interface should feel immediately familiar to an experienced ServiceM8 user: Dispatch Board, job cards, Diary, checklists, Billing, Materials & Services, inventory, reports, Account, and Settings. Kingo uses its own colors, terminology, code, and assets; no ServiceM8 logo or proprietary graphics are copied.
 
-## Source-of-truth boundaries
-- ServiceM8: customer, job, schedule, permanent job history.
-- Kingo App: inspection readings, findings, recommendation rules, price book, inventory, memberships, protection eligibility, reports.
-- Stripe: payment credentials and recurring membership billing. Do not store raw bank/card details in Kingo App.
-- AI: explanation/report assistant only. AI must not invent diagnosis, price, stock, or protection eligibility.
+The first commercial purpose is to guide Jesse and Charlie through door-to-door outreach, preventive inspections, troubleshooting, evidence-based recommendations, same-day inventory checks, job totals, and daily sales tracking.
 
-## V1 user flow
-1. Technician signs in.
-2. App syncs today's ServiceM8 jobs.
-3. Technician opens a job by ServiceM8 UUID/job number.
-4. Technician completes Outdoor and Indoor inspection sections.
-5. Every checkpoint supports status, measurement, photo, and note where applicable.
-6. Rule engine maps supported findings to Kingo recommendations.
-7. Inventory engine checks technician truck stock.
-8. Same-day install is available only when required stock exists.
-9. Customer sees Green / Yellow / Red findings with evidence.
-10. Customer sees standard/member pricing and membership enrollment path.
-11. Completed work decrements inventory and writes a concise summary back to ServiceM8.
+## Product boundary
+Kingo Dispatch is designed to become Kingo's operating system rather than a permanent ServiceM8-dependent companion.
 
-## Summer inspection checkpoints
+- Kingo Dispatch: customers, properties, equipment, jobs, inspections, readings, SOPs, recommendations, price book, inventory, sales, memberships, reports, photos, notes, and external-reference IDs.
+- ServiceM8: temporary import/sync source while Kingo Dispatch is being validated; ServiceM8 UUIDs remain optional external references.
+- Stripe: payment credentials and recurring membership billing. Raw bank/card details never belong in Kingo Dispatch.
+- QuickBooks: accounting destination when the integration is implemented.
+- AI: job-aware help, explanation, troubleshooting support, and report drafting. AI cannot invent readings, stock, prices, diagnoses, or protection eligibility.
+
+## Interfaces
+### Desktop management interface
+- Dispatch Board
+- Job list and job cards
+- Clients, contacts, properties, and equipment
+- Diary, notes, photos, forms, and checklists
+- Quotes, invoices, payments, and job totals
+- Materials & Services price book
+- Inventory counts, purchase list, and truck/shop locations
+- Door-to-door funnel and daily sales reports
+- SOP manager
+- Account and Settings
+- Staff selector placeholder for Jesse and Charlie
+- Integrations/API connection status
+
+### Phone field interface
+- Today and assigned jobs
+- Jesse/Charlie selector
+- Door-to-door guided interaction
+- Preventive-maintenance SOP
+- No-cool troubleshooting decision tree
+- Job readings, photos, notes, recommendations, and approvals
+- Inventory availability and quick quantity adjustment
+- Billing summary, checkout, and next-job flow
+- Ask Kingo AI
+
+## Status convention
+Every visible module stays in the interface even before its backend is complete.
+
+- Green: connected/working
+- Blue: working prototype
+- Amber: not connected yet
+
+This preserves the full operating-system map without pretending unfinished integrations are live.
+
+## Core V1 field flow
+1. Open Kingo Dispatch and review stock/purchase alerts.
+2. Select Jesse or Charlie.
+3. Open an existing job or create a door-to-door lead.
+4. Record customer, property, equipment, and job information once.
+5. Follow the relevant guided SOP.
+6. Record objective measurements, observations, photos, and notes.
+7. A verified blocking condition stops dependent testing until the customer approves correction or declines.
+8. The rule engine maps a supported deficiency to an approved material/service.
+9. Inventory confirms whether the work can be completed today.
+10. Approved work is added to the running job total.
+11. Installed items reduce inventory and increase today's sales.
+12. Complete the job, record payment/collection status, and move to the next job.
+
+## SOP 1 — Door-to-door
+- Opening introduction
+- Complimentary preventive inspection explanation
+- Qualification questions
+- Objection/help prompts
+- Explicit homeowner permission
+- Customer/contact capture
+- Create lead/job
+- Transfer directly into Preventive Maintenance SOP
+- Track doors, answers, conversations, inspections, sales, memberships, and revenue
+
+## SOP 2 — Summer preventive maintenance
 ### Outdoor / condenser
 - Condenser coil condition
-- Compressor amperage
+- Contactor and electrical condition
+- Compressor amperage and starting condition
 - Condenser fan motor amperage
-- Run capacitor rated vs measured MFD
-- Contactor and electrical connections
-- Operating/refrigerant performance
+- Run capacitor rated versus measured MFD
+- Surge protection
+- Refrigerant type and performance readings
+- Low-side pressure, high-side pressure, suction-line temperature, liquid-line temperature, ambient, return DB/WB, and supply DB
+- Deterministic PT, saturation-temperature, superheat, and subcooling calculations
 
 ### Indoor
-- Indoor equipment / evaporator condition
+- Indoor equipment and evaporator condition
+- Filter and filtration configuration
 - Blower motor amperage and wheel condition
-- Condensate drain line and pan
+- Airflow/static-pressure fields
+- Drain line, cleanout, pan, and treatment
 - Primary and secondary overflow protection
 - Thermostat operation
-- Filter condition
-- Airflow and indoor air quality
+- Indoor air quality and UV options
+
+## SOP 3 — Residential no-cool troubleshooting
+- Thermostat call
+- Indoor blower
+- Outdoor unit operation
+- Contactor/control voltage
+- Line/load voltage
+- Capacitor/start circuit
+- Compressor and condenser fan branches
+- Airflow and coil condition
+- Temperature performance
+- Refrigeration measurements and charging method
+- Finding, recommendation, customer explanation, and job completion
 
 ## Recommendation discipline
-- Green: operating normally; no sale.
-- Yellow: documented degradation/aging; approved preventive recommendation may be shown.
-- Red: failed/outside approved Kingo limits; corrective action may be shown.
-- Recommendations require evidence and an approved mapping rule.
-- Out-of-stock items cannot be shown as same-day installs; mark as Order & Schedule.
+- Pass: continue; no corrective recommendation.
+- Attention: documented deterioration; show only an approved preventive option supported by the finding.
+- Correct before continuing: a verified condition prevents a valid dependent test.
+- Action required: a measured or observed condition is outside the approved Kingo rule.
+- Customer declined: record the decline and identify which downstream checks could not be completed reliably.
+- Out-of-stock work is marked Order & Schedule, never same-day install.
 
 ## Inventory fields
-- Product name
+- Product/service name
 - Brand
 - Model/SKU
 - Category
 - Supplier
 - Location: Jesse Truck / Charlie Truck / Kingo Stock
 - Quantity on hand
-- Minimum stock
-- Unit cost
-- Standard selling price
+- Minimum/reorder quantity
+- Verified-count status
+- Unit cost, including legitimate `$0` acquisition cost
+- Standard price
 - Member price
 - Gross profit/margin
-- Compatible systems/rules
+- Compatible systems and recommendation rules
 - Active/inactive
+- Purchase-list status
 
 ## Initial inventory categories
 - Capacitors
 - Hard-start kits
 - Contactors
+- Transformers
 - Condenser fan motors
-- Blower motors
-- Primary/secondary float switches
-- Drain cleanout/treatment products
-- UV/IAQ products
+- Blower motors and blower cleaning
 - Surge protectors
+- Primary/secondary float switches
+- Drain cleanout and drain treatment products
 - Thermostats
 - Filters/media filtration
+- UV/IAQ products
+- Coil-cleaning services
+- Refrigerant/service items
 
 ## Membership / protection
-V1 stores membership status and protection eligibility but does not yet make broad failure guarantees.
+V1 keeps the fields and screens visible while legal, pricing, and coverage rules are finalized.
+
 - Active / Past Due / Cancelled
-- Current monthly/annual membership amount
+- Monthly/annual amount
 - Effective and renewal dates
 - Covered equipment
 - Purchased preventive/protection items
 - Component-specific benefit eligibility
+- Member pricing
+- Annual reassessment
 
-## Integrations
-### ServiceM8
-Phase 1 is read-only: authenticate, retrieve jobs/customers/job UUIDs, and attach Kingo inspection records to those IDs.
-Write-back is approval-gated until verified.
+## Domain and routing
+- Production target: `https://dispatch.kingodigital.com`
+- Internal prototype route: `/field-app`
+- `proxy.ts` rewrites the dispatch hostname to the internal field-app route.
+- The app includes installable web-app metadata for desktop and phone use.
+- DNS/custom-domain assignment remains a deployment configuration step and must not be represented as complete until verified live.
 
-### Stripe
-Use for recurring membership billing and payment status. Raw payment credentials stay with Stripe.
-
-## V1 build order
-1. Mobile shell and navigation.
-2. Authentication/roles: Admin, Technician.
-3. ServiceM8 read-only job sync.
-4. Inspection schema and UI.
-5. Price book schema.
-6. Inventory schema and truck-location stock.
-7. Recommendation rule engine.
-8. Customer findings/recommendation screen.
-9. Membership status and Stripe recurring billing.
-10. ServiceM8 write-back and inventory decrement.
-11. AI customer-summary layer.
+## Build order
+1. Desktop ServiceM8-familiar operating shell and responsive phone shell.
+2. Inventory and Materials & Services controls.
+3. Door-to-door, maintenance, and troubleshooting SOP execution.
+4. Persistent customer/job/equipment database.
+5. Price-book/recommendation rules and daily sales ledger.
+6. Photos, Diary, checklists, forms, quotes, invoices, payments, and checkout.
+7. Stripe and QuickBooks integrations.
+8. AI help using structured job context.
+9. ServiceM8 import/sync during transition.
+10. Parallel validation, backup/restore test, and eventual ServiceM8 cutover only after Kingo Dispatch proves complete enough for Kingo's actual workflow.
 
 ## Current branch
 `codex/kingo-field-app-v1`
@@ -114,5 +190,5 @@ Use for recurring membership billing and payment status. Raw payment credentials
 ## Current prototype route
 `/field-app`
 
-## Next implementation target
-Verify ServiceM8 API credentials/capabilities and choose the production data/auth backend before adding persistent customer or payment data.
+## Current next target
+Run the updated branch locally, verify the desktop shell and responsive phone view, then persist inventory and SOP state before connecting customer or payment data.
