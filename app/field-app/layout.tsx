@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import "./dispatch.css";
 
 export const metadata: Metadata = {
   title: {
@@ -32,5 +33,5 @@ export default function FieldAppLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return children;
+  return <div className="kingo-dispatch-shell">{children}</div>;
 }
