@@ -1,0 +1,143 @@
+.page {
+  display: grid;
+  min-height: 70vh;
+  place-items: center;
+  padding: clamp(2.5rem, 8vw, 6rem) 1rem;
+}
+
+.card {
+  width: min(100%, 44rem);
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  background: rgb(255 255 255 / 96%);
+  box-shadow: var(--shadow-strong);
+  padding: clamp(1.5rem, 5vw, 3rem);
+}
+
+.eyebrow {
+  margin: 0 0 0.65rem;
+  color: var(--accent-strong);
+  font-family: var(--font-barlow-condensed), "Arial Narrow", Arial, sans-serif;
+  font-size: var(--type-label);
+  font-weight: 900;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.card h1 {
+  margin: 0;
+  color: var(--brand-strong);
+  font-size: clamp(2.2rem, 8vw, 4rem);
+  line-height: 0.98;
+}
+
+.intro {
+  margin: 1.25rem 0 0;
+  color: var(--foreground);
+  font-size: var(--type-body-large);
+}
+
+.steps {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1.75rem 0;
+  padding-left: 1.4rem;
+}
+
+.steps li {
+  padding-left: 0.35rem;
+}
+
+.enrollment {
+  display: grid;
+  gap: 1rem;
+}
+
+.status {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem;
+  align-items: start;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--surface-muted);
+  padding: 1rem;
+}
+
+.status span {
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-top: 0.4rem;
+  border-radius: 999px;
+  background: var(--muted);
+  box-shadow: 0 0 0 0.3rem rgb(97 112 107 / 14%);
+}
+
+.status p {
+  margin: 0;
+  font-weight: 650;
+}
+
+.ready span,
+.success span {
+  background: var(--brand);
+  box-shadow: 0 0 0 0.3rem rgb(15 92 90 / 14%);
+}
+
+.connecting span {
+  background: #c17b19;
+  box-shadow: 0 0 0 0.3rem rgb(193 123 25 / 14%);
+}
+
+.blocked span,
+.error span {
+  background: var(--accent);
+  box-shadow: 0 0 0 0.3rem rgb(200 74 43 / 14%);
+}
+
+.button {
+  min-height: 3.4rem;
+  border: 0;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 850;
+  padding: 0.9rem 1.4rem;
+  transition:
+    background 150ms ease,
+    transform 150ms ease;
+}
+
+.button:hover:not(:disabled) {
+  background: var(--accent-strong);
+  transform: translateY(-1px);
+}
+
+.button:focus-visible {
+  outline: 3px solid rgb(200 74 43 / 35%);
+  outline-offset: 3px;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.64;
+}
+
+.note {
+  margin: 1.5rem 0 0;
+  color: var(--muted);
+  font-size: var(--type-small);
+}
+
+@media (max-width: 34rem) {
+  .page {
+    align-items: start;
+    padding: 1rem;
+  }
+
+  .card {
+    border-radius: 1.15rem;
+    padding: 1.35rem;
+  }
+}
