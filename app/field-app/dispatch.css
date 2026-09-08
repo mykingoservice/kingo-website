@@ -1,0 +1,40 @@
+.kingo-dispatch-shell {
+  min-height: 100vh;
+}
+
+/* Rename the existing prototype shell without duplicating the large client component. */
+.kingo-dispatch-shell aside > div:first-child h1 {
+  font-size: 0;
+}
+
+.kingo-dispatch-shell aside > div:first-child h1::after {
+  content: "Kingo Dispatch";
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
+.kingo-dispatch-shell aside > div:first-child p:last-child {
+  font-size: 0;
+}
+
+.kingo-dispatch-shell aside > div:first-child p:last-child::after {
+  content: "Field service operating system";
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+@media (max-width: 1023px) {
+  .kingo-dispatch-shell header p:first-child {
+    font-size: 0;
+  }
+
+  .kingo-dispatch-shell header p:first-child::after {
+    content: "Kingo Dispatch";
+    font-size: 0.625rem;
+    line-height: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+}
