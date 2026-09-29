@@ -3,7 +3,7 @@ import Link from "next/link";
 import { BOOKING_URL, PHONE_HREF } from "../../cta-links";
 
 const googleReviewUrl = "https://share.google/sMydG0Cc0xAryzgiU";
-const jobProofPath = "/job-post-pins/job-2020/";
+const jobProofPath = "/completed-job-pins/job-2020/";
 
 export const metadata: Metadata = {
   title: "Elizabeth MD Review for Job #2020 Carrier Condenser Installation",
@@ -85,7 +85,7 @@ export default function Page() {
           <p className="eyebrow">Connected job proof</p>
           <h2>Job #2020 — Carrier condenser installation</h2>
           <p>
-            The connected Job Post Pin proof page documents the Carrier
+            The connected Completed Job Pin proof page documents the Carrier
             condenser installation and installation checks for Job #2020.
           </p>
           <Link href={jobProofPath}>Open Job #2020 proof page</Link>

@@ -6,11 +6,14 @@ export const metadata: Metadata = {
   title: "Job Post Pins™ — Real HVAC Proof Gallery",
   description:
     "Learn how Kingo Services uses Job Post Pins™ as documented HVAC proof records for completed service calls, job numbers, photos, field notes, and supporting media.",
+  alternates: {
+    canonical: "https://mykingoservice.com/completed-job-pins/",
+  },
 };
 
 const jobPins = [
   {
-    href: "/job-post-pins/job-2020/",
+    href: "/completed-job-pins/job-2020/",
     jobId: "Job #2020",
     location: "Houston / Westbury area",
     service: "Carrier Condenser Installation",
@@ -18,7 +21,7 @@ const jobPins = [
     date: "2026-05-20",
   },
   {
-    href: "/job-post-pins/job-2312-sugar-land-extra-room-airflow/",
+    href: "/completed-job-pins/job-2312-sugar-land-extra-room-airflow/",
     jobId: "Job #2312",
     location: "Sugar Land, TX",
     service: "Airflow / Ductwork Modification",

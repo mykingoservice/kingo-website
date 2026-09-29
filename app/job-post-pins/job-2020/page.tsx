@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "Job #2020 Houston Westbury Carrier Condenser Proof",
   description:
     "Job Post Pin proof asset for Kingo Services Job #2020 in the Houston / Westbury area.",
+  alternates: {
+    canonical: "https://mykingoservice.com/completed-job-pins/job-2020/",
+  },
 };
 
 export default function Page() {

@@ -7,6 +7,10 @@ export const metadata: Metadata = {
     "Job #2312 Sugar Land Extra Room Airflow Proof | Kingo Services",
   description:
     "Job Post Pin proof record for Kingo Services Job #2312 in Sugar Land, Texas, adding airflow to an extra room using one existing duct.",
+  alternates: {
+    canonical:
+      "https://mykingoservice.com/completed-job-pins/job-2312-sugar-land-extra-room-airflow/",
+  },
 };
 
 const workPerformed = [
