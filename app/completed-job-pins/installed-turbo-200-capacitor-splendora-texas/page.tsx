@@ -19,6 +19,10 @@ const youtubeEmbedUrl = "https://www.youtube.com/embed/VOOahjN8L1I";
 export const metadata: Metadata = {
   title: "Installed a Turbo 200 Capacitor in Splendora, Texas | Kingo Services",
   description,
+  alternates: {
+    canonical:
+      "https://mykingoservice.com/completed-job-pins/installed-turbo-200-capacitor-splendora-texas/",
+  },
   keywords: [
     "mini split repair Splendora TX",
     "Comfort Total mini split repair",

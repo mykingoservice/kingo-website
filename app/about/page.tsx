@@ -67,7 +67,7 @@ const officialProfiles = [
 ];
 
 const proofAssetPath =
-  "/job-post-pins/job-2020/job-2020-houston-westbury-carrier-condenser-job-post-pin.png";
+  "/completed-job-pins/job-2020/job-2020-houston-westbury-carrier-condenser-completed-job-pin.png";
 
 const internalLinks = [
   {
@@ -86,8 +86,8 @@ const internalLinks = [
     text: "View review pages connected to documented job proof where available.",
   },
   {
-    href: "/job-post-pins/job-2020/",
-    title: "Job Post Pins",
+    href: "/completed-job-pins/job-2020/",
+    title: "Completed Job Pins",
     text: "See a documented Kingo job proof asset from the Houston / Westbury area.",
   },
 ];
@@ -303,7 +303,7 @@ export default function Page() {
             throughout the service process.
           </p>
           <p>We believe transparency creates trust.</p>
-          <Link href="/job-post-pins/job-2020/">View documented job proof</Link>
+          <Link href="/completed-job-pins/job-2020/">View documented job proof</Link>
         </div>
         <div className="service-card">
           <Image

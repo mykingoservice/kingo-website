@@ -1,0 +1,35 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/job-post-pins",
+      "destination": "/completed-job-pins/",
+      "statusCode": 301
+    },
+    {
+      "source": "/job-post-pins/",
+      "destination": "/completed-job-pins/",
+      "statusCode": 301
+    },
+    {
+      "source": "/job-post-pins/job-2020",
+      "destination": "/completed-job-pins/job-2020/",
+      "statusCode": 301
+    },
+    {
+      "source": "/job-post-pins/job-2020/",
+      "destination": "/completed-job-pins/job-2020/",
+      "statusCode": 301
+    },
+    {
+      "source": "/job-post-pins/job-2312-sugar-land-extra-room-airflow",
+      "destination": "/completed-job-pins/job-2312-sugar-land-extra-room-airflow/",
+      "statusCode": 301
+    },
+    {
+      "source": "/job-post-pins/job-2312-sugar-land-extra-room-airflow/",
+      "destination": "/completed-job-pins/job-2312-sugar-land-extra-room-airflow/",
+      "statusCode": 301
+    }
+  ]
+}

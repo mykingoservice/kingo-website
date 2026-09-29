@@ -26,6 +26,9 @@ export const metadata: Metadata = {
   title: "Completed Job Pins™ — Real HVAC Proof Gallery",
   description:
     "Browse documented HVAC proof records from Kingo Services, including completed service calls, job numbers, locations, equipment details, photos, field notes, and supporting videos.",
+  alternates: {
+    canonical: "https://mykingoservice.com/completed-job-pins/",
+  },
 };
 
 const jobPins: JobPin[] = [
