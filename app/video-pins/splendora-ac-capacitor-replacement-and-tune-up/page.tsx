@@ -4,6 +4,26 @@ import { BOOKING_URL, PHONE_HREF } from "@/app/cta-links";
 
 const videoId = "PI6QYkWjHmg";
 const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
+const embedUrl = `https://www.youtube-nocookie.com/embed/${videoId}`;
+const thumbnailUrl =
+  "https://www.mykingoservice.com/images/video-pins/kingo-splendora-capacitor-thumbnail.jpg";
+const videoDescription =
+  "Kingo Services Heating and Cooling field footage of outdoor AC capacitor replacement and tune-up work in Splendora, Texas.";
+
+const videoStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  name: "AC Capacitor Replacement & Tune-Up in Splendora, TX | Kingo Services",
+  description: videoDescription,
+  thumbnailUrl,
+  uploadDate: "2026-09-30T08:39:02-07:00",
+  embedUrl,
+  publisher: {
+    "@type": "Organization",
+    name: "Kingo Services Heating and Cooling",
+    url: "https://www.mykingoservice.com/",
+  },
+};
 
 export const metadata: Metadata = {
   title: "Splendora AC Capacitor Replacement and Tune-Up Video",
@@ -13,11 +33,21 @@ export const metadata: Metadata = {
     canonical:
       "https://www.mykingoservice.com/video-pins/splendora-ac-capacitor-replacement-and-tune-up/",
   },
+  openGraph: {
+    title: "AC Capacitor Replacement and Tune-Up in Splendora",
+    description: videoDescription,
+    images: [{ url: thumbnailUrl, width: 1280, height: 720 }],
+    type: "video.other",
+  },
 };
 
 export default function SplendoraCapacitorVideoPinPage() {
   return (
     <main className="mx-auto max-w-6xl px-6 py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(videoStructuredData) }}
+      />
       <nav aria-label="Breadcrumb" className="text-sm text-slate-600">
         <Link href="/video-pins/" className="underline hover:text-slate-950">
           Video Pins
@@ -42,7 +72,7 @@ export default function SplendoraCapacitorVideoPinPage() {
       <div className="mt-10 aspect-video overflow-hidden rounded-3xl bg-slate-950 shadow-lg">
         <iframe
           className="h-full w-full"
-          src={`https://www.youtube-nocookie.com/embed/${videoId}`}
+          src={embedUrl}
           title="Kingo Services AC capacitor replacement and tune-up in Splendora, Texas"
           loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
