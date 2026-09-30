@@ -21,7 +21,7 @@ const barlowCondensed = Barlow_Condensed({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mykingoservice.com"),
+  metadataBase: new URL("https://www.mykingoservice.com"),
   title: {
     default: "Kingo Services Heating and Cooling",
     template: "%s | Kingo Services Heating and Cooling",

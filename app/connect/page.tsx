@@ -5,7 +5,7 @@ import { GoogleAnalytics } from "./google-analytics";
 import styles from "./page.module.css";
 import { TrackedLink, type ConnectEventName } from "./tracked-link";
 
-const SITE_URL = "https://mykingoservice.com/";
+const SITE_URL = "https://www.mykingoservice.com/";
 const CONNECT_BOOKING_URL = "https://bit.ly/kingoonlinebooking";
 const SMS_HREF = "sms:+18325171464";
 const EMAIL_HREF = "mailto:email@mykingoservice.com";

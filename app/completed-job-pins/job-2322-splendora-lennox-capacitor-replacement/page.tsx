@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "Completed Job Pin proof record for Kingo Services Job #2322 in Splendora, Texas. A failed capacitor caused the Lennox condenser fan to stop spinning and the air conditioner to stop cooling.",
   alternates: {
     canonical:
-      "https://mykingoservice.com/completed-job-pins/job-2322-splendora-lennox-capacitor-replacement/",
+      "https://www.mykingoservice.com/completed-job-pins/job-2322-splendora-lennox-capacitor-replacement/",
   },
 };
 

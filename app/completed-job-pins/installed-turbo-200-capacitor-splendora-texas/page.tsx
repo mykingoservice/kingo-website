@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   description,
   alternates: {
     canonical:
-      "https://mykingoservice.com/completed-job-pins/installed-turbo-200-capacitor-splendora-texas/",
+      "https://www.mykingoservice.com/completed-job-pins/installed-turbo-200-capacitor-splendora-texas/",
   },
   keywords: [
     "mini split repair Splendora TX",
@@ -56,7 +56,7 @@ const jobFacts = [
   { label: "Result", value: "Cooling Restored" },
   { label: "License", value: "TACLA33837E" },
   { label: "Phone", value: "(832) 517-1464" },
-  { label: "Website", value: "https://mykingoservice.com" },
+  { label: "Website", value: "https://www.mykingoservice.com" },
 ];
 
 const symptoms = [
@@ -103,10 +103,10 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "HVACBusiness",
-      "@id": "https://mykingoservice.com/#business",
+      "@id": "https://www.mykingoservice.com/#business",
       name: "Kingo Services Heating and Cooling",
       telephone: "+18325171464",
-      url: "https://mykingoservice.com",
+      url: "https://www.mykingoservice.com",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Splendora",
@@ -117,7 +117,7 @@ const jsonLd = {
     {
       "@type": "Service",
       name: "Mini split capacitor replacement",
-      provider: { "@id": "https://mykingoservice.com/#business" },
+      provider: { "@id": "https://www.mykingoservice.com/#business" },
       areaServed: {
         "@type": "City",
         name: "Splendora",
@@ -130,7 +130,7 @@ const jsonLd = {
       "@type": "VideoObject",
       name: title,
       description,
-      thumbnailUrl: `https://mykingoservice.com${heroImage}`,
+      thumbnailUrl: `https://www.mykingoservice.com${heroImage}`,
       uploadDate: "2026-07-03",
       embedUrl: youtubeEmbedUrl,
       contentUrl: youtubeShortUrl,
@@ -139,13 +139,13 @@ const jsonLd = {
       "@type": "Article",
       headline: title,
       description,
-      image: `https://mykingoservice.com${heroImage}`,
+      image: `https://www.mykingoservice.com${heroImage}`,
       datePublished: "2026-07-03",
       author: {
         "@type": "Organization",
         name: "Kingo Services Heating and Cooling",
       },
-      publisher: { "@id": "https://mykingoservice.com/#business" },
+      publisher: { "@id": "https://www.mykingoservice.com/#business" },
     },
   ],
 };

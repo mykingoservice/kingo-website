@@ -84,20 +84,20 @@ const articleSchema = {
     "A real Carrier AC capacitor replacement in Pearland, Texas, documented by Kingo Services Heating and Cooling.",
   datePublished: "2026-08-14",
   dateModified: "2026-08-14",
-  image: `https://mykingoservice.com${imagePath}`,
-  mainEntityOfPage: `https://mykingoservice.com${canonicalPath}`,
+  image: `https://www.mykingoservice.com${imagePath}`,
+  mainEntityOfPage: `https://www.mykingoservice.com${canonicalPath}`,
   author: {
     "@type": "Organization",
     name: "Kingo Services Heating and Cooling",
-    url: "https://mykingoservice.com",
+    url: "https://www.mykingoservice.com",
   },
   publisher: {
     "@type": "Organization",
     name: "Kingo Services Heating and Cooling",
-    url: "https://mykingoservice.com",
+    url: "https://www.mykingoservice.com",
     logo: {
       "@type": "ImageObject",
-      url: "https://mykingoservice.com/kingo-logo.webp",
+      url: "https://www.mykingoservice.com/kingo-logo.webp",
     },
   },
 };
