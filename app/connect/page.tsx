@@ -28,7 +28,7 @@ const secondaryLinks = [
     external: true,
   },
   {
-    href: "https://www.facebook.com/Kingollc/",
+    href: "https://www.facebook.com/mykingoservice/",
     label: "Facebook",
     eventName: "connect_facebook",
     actionName: "facebook",
