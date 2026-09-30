@@ -17,6 +17,7 @@ export type ConnectEventName =
   | "connect_x"
   | "video_pin_call"
   | "video_pin_book_service"
+  | "video_pin_short"
   | "video_pin_youtube";
 
 type TrackedLinkProps = ComponentPropsWithoutRef<"a"> & {

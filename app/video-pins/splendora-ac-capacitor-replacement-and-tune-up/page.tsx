@@ -7,6 +7,9 @@ import { TrackedLink } from "@/app/connect/tracked-link";
 const videoId = "PI6QYkWjHmg";
 const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
 const embedUrl = `https://www.youtube-nocookie.com/embed/${videoId}`;
+const shortId = "oq6PvqrRmZg";
+const shortUrl = `https://www.youtube.com/shorts/${shortId}`;
+const shortEmbedUrl = `https://www.youtube-nocookie.com/embed/${shortId}`;
 const thumbnailUrl =
   "https://www.mykingoservice.com/images/video-pins/kingo-splendora-capacitor-thumbnail.jpg";
 const videoDescription =
@@ -98,6 +101,40 @@ export default function SplendoraCapacitorVideoPinPage() {
           Watch this video on the Kingo YouTube channel
         </TrackedLink>
       </p>
+
+      <section className="mt-16" aria-labelledby="splendora-short-heading">
+        <h2
+          id="splendora-short-heading"
+          className="text-3xl font-bold text-slate-950"
+        >
+          A quick look at the work
+        </h2>
+        <p className="mt-4 max-w-3xl text-slate-700">
+          This Kingo Short highlights power checks, capacitor service, and
+          outdoor-unit checks from the full Splendora video above.
+        </p>
+        <div className="mt-6 aspect-[9/16] max-w-sm overflow-hidden rounded-3xl bg-slate-950 shadow-lg">
+          <iframe
+            className="h-full w-full"
+            src={shortEmbedUrl}
+            title="Kingo Services Splendora AC capacitor replacement and tune-up Short"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
+        </div>
+        <p className="mt-4 text-sm text-slate-600">
+          <TrackedLink
+            actionName="splendora_capacitor_video_pin_short"
+            eventName="video_pin_short"
+            href={shortUrl}
+            className="underline hover:text-slate-950"
+          >
+            Watch the Short on the Kingo YouTube channel
+          </TrackedLink>
+        </p>
+      </section>
 
       <section className="mt-16 grid gap-6 md:grid-cols-3">
         <div className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
