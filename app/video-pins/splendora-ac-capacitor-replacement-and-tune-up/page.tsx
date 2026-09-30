@@ -1,0 +1,124 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { BOOKING_URL, PHONE_HREF } from "@/app/cta-links";
+
+const videoId = "PI6QYkWjHmg";
+const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
+
+export const metadata: Metadata = {
+  title: "Splendora AC Capacitor Replacement and Tune-Up Video",
+  description:
+    "Watch Kingo Services Heating and Cooling field footage of AC capacitor replacement and tune-up work in Splendora, Texas.",
+  alternates: {
+    canonical:
+      "https://www.mykingoservice.com/video-pins/splendora-ac-capacitor-replacement-and-tune-up/",
+  },
+};
+
+export default function SplendoraCapacitorVideoPinPage() {
+  return (
+    <main className="mx-auto max-w-6xl px-6 py-16">
+      <nav aria-label="Breadcrumb" className="text-sm text-slate-600">
+        <Link href="/video-pins/" className="underline hover:text-slate-950">
+          Video Pins
+        </Link>
+        <span aria-hidden="true"> / </span>
+        <span>Splendora AC capacitor replacement and tune-up</span>
+      </nav>
+
+      <p className="mt-8 text-sm font-semibold uppercase tracking-[0.25em] text-slate-500">
+        Kingo field video · Splendora, Texas
+      </p>
+      <h1 className="mt-4 max-w-4xl text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl">
+        AC capacitor replacement and tune-up in Splendora
+      </h1>
+      <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-700">
+        This Kingo Services Heating and Cooling video documents outdoor AC
+        inspection, capacitor replacement, refrigerant-line checks, and
+        condenser-coil washing. It is field footage, not an electrical repair
+        tutorial.
+      </p>
+
+      <div className="mt-10 aspect-video overflow-hidden rounded-3xl bg-slate-950 shadow-lg">
+        <iframe
+          className="h-full w-full"
+          src={`https://www.youtube-nocookie.com/embed/${videoId}`}
+          title="Kingo Services AC capacitor replacement and tune-up in Splendora, Texas"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        />
+      </div>
+      <p className="mt-4 text-sm text-slate-600">
+        <a href={videoUrl} className="underline hover:text-slate-950">
+          Watch this video on the Kingo YouTube channel
+        </a>
+      </p>
+
+      <section className="mt-16 grid gap-6 md:grid-cols-3">
+        <div className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
+          <h2 className="text-2xl font-bold text-slate-950">Related AC service</h2>
+          <p className="mt-3 text-slate-700">
+            Need help with a cooling problem? See how Kingo handles AC repair
+            requests and service intake.
+          </p>
+          <Link
+            href="/services/ac-repair/"
+            className="mt-5 inline-block font-semibold text-blue-800 underline"
+          >
+            Explore AC repair
+          </Link>
+        </div>
+        <div className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
+          <h2 className="text-2xl font-bold text-slate-950">HVAC maintenance</h2>
+          <p className="mt-3 text-slate-700">
+            See Kingo maintenance service for seasonal system checks and
+            cooling concerns.
+          </p>
+          <Link
+            href="/services/hvac-maintenance/"
+            className="mt-5 inline-block font-semibold text-blue-800 underline"
+          >
+            Explore HVAC maintenance
+          </Link>
+        </div>
+        <div className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
+          <h2 className="text-2xl font-bold text-slate-950">Splendora service area</h2>
+          <p className="mt-3 text-slate-700">
+            Learn about Kingo heating and cooling service for Splendora and
+            nearby properties.
+          </p>
+          <Link
+            href="/service-area/splendora/"
+            className="mt-5 inline-block font-semibold text-blue-800 underline"
+          >
+            Explore Splendora service
+          </Link>
+        </div>
+      </section>
+
+      <section className="mt-16 rounded-3xl bg-slate-950 p-8 text-white">
+        <h2 className="text-3xl font-bold">Need AC service?</h2>
+        <p className="mt-4 max-w-3xl text-slate-300">
+          Tell Kingo what your system is doing and where service is needed.
+        </p>
+        <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+          <a
+            href={PHONE_HREF}
+            className="rounded-full bg-white px-6 py-3 text-center font-semibold text-slate-950 hover:bg-slate-100"
+            style={{ color: "#0f172a" }}
+          >
+            Call Kingo
+          </a>
+          <a
+            href={BOOKING_URL}
+            className="rounded-full border border-white/30 px-6 py-3 text-center font-semibold text-white hover:bg-white/10"
+          >
+            Request service
+          </a>
+        </div>
+      </section>
+    </main>
+  );
+}

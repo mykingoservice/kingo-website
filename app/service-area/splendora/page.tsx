@@ -80,6 +80,25 @@ export default function Page() {
         </div>
       </section>
 
+      <section className="mt-16 rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-slate-500">
+          Kingo field video
+        </p>
+        <h2 className="mt-3 text-3xl font-bold text-slate-950">
+          AC capacitor replacement and tune-up in Splendora
+        </h2>
+        <p className="mt-4 max-w-3xl text-slate-700">
+          Watch documented Kingo outdoor AC service work, including capacitor
+          replacement, inspection, and condenser-coil washing.
+        </p>
+        <Link
+          href="/video-pins/splendora-ac-capacitor-replacement-and-tune-up/"
+          className="mt-6 inline-block font-semibold text-blue-800 underline"
+        >
+          Watch the Splendora Video Pin
+        </Link>
+      </section>
+
       <section className="mt-16 rounded-3xl bg-slate-950 p-8 text-white">
         <h2 className="text-3xl font-bold tracking-tight">
           Need AC, heating, maintenance, commercial HVAC, or emergency help in Splendora?

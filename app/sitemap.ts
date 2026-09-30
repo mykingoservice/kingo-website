@@ -51,6 +51,8 @@ const paths = [
   "/services/heating-repair/",
   "/services/hvac-maintenance/",
   "/shorts/this-room-needed-more-air/",
+  "/video-pins/",
+  "/video-pins/splendora-ac-capacitor-replacement-and-tune-up/",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { BOOKING_URL, PHONE_HREF } from "../../cta-links";
 
 const symptoms = [
@@ -123,6 +124,20 @@ export default function Page() {
           <p className="eyebrow">Good details to share</p>
           <h2>Tell us what changed with the system.</h2>
           <p>{whenToCall.join(" ")}</p>
+        </div>
+      </section>
+
+      <section className="home-section">
+        <div className="section-heading">
+          <p className="eyebrow">Kingo field video</p>
+          <h2>See AC capacitor work in Splendora.</h2>
+          <p>
+            Watch Kingo field footage of an outdoor AC capacitor replacement
+            and tune-up, including inspection and condenser-coil washing.
+          </p>
+          <Link href="/video-pins/splendora-ac-capacitor-replacement-and-tune-up/">
+            Watch the Splendora Video Pin
+          </Link>
         </div>
       </section>
 

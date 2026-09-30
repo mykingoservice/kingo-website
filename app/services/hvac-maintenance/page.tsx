@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { BOOKING_URL, PHONE_HREF } from "../../cta-links";
 
 const maintenanceReasons = [
@@ -122,6 +123,20 @@ export default function Page() {
           <p className="eyebrow">Good details to share</p>
           <h2>Tell us what you want checked.</h2>
           <p>{detailsToShare.join(" ")}</p>
+        </div>
+      </section>
+
+      <section className="home-section">
+        <div className="section-heading">
+          <p className="eyebrow">Kingo field video</p>
+          <h2>See outdoor AC tune-up work in Splendora.</h2>
+          <p>
+            Watch field footage that includes inspection, capacitor service,
+            refrigerant-line checks, and condenser-coil washing.
+          </p>
+          <Link href="/video-pins/splendora-ac-capacitor-replacement-and-tune-up/">
+            Watch the Splendora Video Pin
+          </Link>
         </div>
       </section>
 
