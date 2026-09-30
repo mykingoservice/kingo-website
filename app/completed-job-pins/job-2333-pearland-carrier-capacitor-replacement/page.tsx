@@ -128,20 +128,20 @@ const articleSchema = {
     "A real Kingo Services field record documenting a Carrier condenser capacitor replacement in Pearland, Texas.",
   datePublished: "2026-07-21",
   dateModified: "2026-08-14",
-  image: `https://mykingoservice.com${imagePath}`,
-  mainEntityOfPage: `https://mykingoservice.com${canonicalPath}`,
+  image: `https://www.mykingoservice.com${imagePath}`,
+  mainEntityOfPage: `https://www.mykingoservice.com${canonicalPath}`,
   author: {
     "@type": "Organization",
     name: "Kingo Services Heating and Cooling",
-    url: "https://mykingoservice.com",
+    url: "https://www.mykingoservice.com",
   },
   publisher: {
     "@type": "Organization",
     name: "Kingo Services Heating and Cooling",
-    url: "https://mykingoservice.com",
+    url: "https://www.mykingoservice.com",
     logo: {
       "@type": "ImageObject",
-      url: "https://mykingoservice.com/kingo-logo.webp",
+      url: "https://www.mykingoservice.com/kingo-logo.webp",
     },
   },
   about: {
@@ -159,7 +159,7 @@ const articleSchema = {
       "@type": "HVACBusiness",
       name: "Kingo Services Heating and Cooling",
       telephone: "+1-832-517-1464",
-      url: "https://mykingoservice.com",
+      url: "https://www.mykingoservice.com",
     },
   },
 };

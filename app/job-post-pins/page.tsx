@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Learn how Kingo Services uses Job Post Pins™ as documented HVAC proof records for completed service calls, job numbers, photos, field notes, and supporting media.",
   alternates: {
-    canonical: "https://mykingoservice.com/completed-job-pins/",
+    canonical: "https://www.mykingoservice.com/completed-job-pins/",
   },
 };
 

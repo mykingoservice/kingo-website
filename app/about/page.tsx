@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { BOOKING_URL, PHONE_HREF } from "../cta-links";
 
-const siteUrl = "https://mykingoservice.com";
+const siteUrl = "https://www.mykingoservice.com";
 
 const serviceArea = [
   "Splendora",
@@ -393,7 +393,7 @@ export default function Page() {
           <p>275 County Road 3662, Splendora, TX 77372</p>
           <p>Phone: (832) 517-1464</p>
           <p>Email: email@mykingoservice.com</p>
-          <p>Website: https://mykingoservice.com</p>
+          <p>Website: https://www.mykingoservice.com</p>
           <p>Founder and Operator: Abdiel Jesus Mata</p>
           <p>Service Area: Splendora and nearby Northeast Greater Houston communities</p>
           <p>Texas TDLR License: TACLA33837E</p>

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Completed Job Pin proof asset for Kingo Services Job #2020 in the Houston / Westbury area.",
   alternates: {
-    canonical: "https://mykingoservice.com/completed-job-pins/job-2020/",
+    canonical: "https://www.mykingoservice.com/completed-job-pins/job-2020/",
   },
 };
 

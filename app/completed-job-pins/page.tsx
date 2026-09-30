@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   description:
     "Browse documented HVAC proof records from Kingo Services, including completed service calls, job numbers, locations, equipment details, photos, field notes, and supporting videos.",
   alternates: {
-    canonical: "https://mykingoservice.com/completed-job-pins/",
+    canonical: "https://www.mykingoservice.com/completed-job-pins/",
   },
 };
 
