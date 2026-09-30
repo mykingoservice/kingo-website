@@ -14,7 +14,10 @@ export type ConnectEventName =
   | "connect_facebook"
   | "connect_instagram"
   | "connect_tiktok"
-  | "connect_x";
+  | "connect_x"
+  | "video_pin_call"
+  | "video_pin_book_service"
+  | "video_pin_youtube";
 
 type TrackedLinkProps = ComponentPropsWithoutRef<"a"> & {
   actionName: string;

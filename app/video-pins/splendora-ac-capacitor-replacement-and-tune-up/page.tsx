@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BOOKING_URL, PHONE_HREF } from "@/app/cta-links";
+import { GoogleAnalytics } from "@/app/connect/google-analytics";
+import { TrackedLink } from "@/app/connect/tracked-link";
 
 const videoId = "PI6QYkWjHmg";
 const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
@@ -9,6 +11,11 @@ const thumbnailUrl =
   "https://www.mykingoservice.com/images/video-pins/kingo-splendora-capacitor-thumbnail.jpg";
 const videoDescription =
   "Kingo Services Heating and Cooling field footage of outdoor AC capacitor replacement and tune-up work in Splendora, Texas.";
+const configuredMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+const GA_MEASUREMENT_ID =
+  configuredMeasurementId && /^G-[A-Z0-9]+$/.test(configuredMeasurementId)
+    ? configuredMeasurementId
+    : undefined;
 
 const videoStructuredData = {
   "@context": "https://schema.org",
@@ -44,6 +51,7 @@ export const metadata: Metadata = {
 export default function SplendoraCapacitorVideoPinPage() {
   return (
     <main className="mx-auto max-w-6xl px-6 py-16">
+      <GoogleAnalytics measurementId={GA_MEASUREMENT_ID} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(videoStructuredData) }}
@@ -81,9 +89,14 @@ export default function SplendoraCapacitorVideoPinPage() {
         />
       </div>
       <p className="mt-4 text-sm text-slate-600">
-        <a href={videoUrl} className="underline hover:text-slate-950">
+        <TrackedLink
+          actionName="splendora_capacitor_video_pin_youtube"
+          eventName="video_pin_youtube"
+          href={videoUrl}
+          className="underline hover:text-slate-950"
+        >
           Watch this video on the Kingo YouTube channel
-        </a>
+        </TrackedLink>
       </p>
 
       <section className="mt-16 grid gap-6 md:grid-cols-3">
@@ -134,19 +147,23 @@ export default function SplendoraCapacitorVideoPinPage() {
           Tell Kingo what your system is doing and where service is needed.
         </p>
         <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-          <a
+          <TrackedLink
+            actionName="splendora_capacitor_video_pin_call"
+            eventName="video_pin_call"
             href={PHONE_HREF}
             className="rounded-full bg-white px-6 py-3 text-center font-semibold text-slate-950 hover:bg-slate-100"
             style={{ color: "#0f172a" }}
           >
             Call Kingo
-          </a>
-          <a
+          </TrackedLink>
+          <TrackedLink
+            actionName="splendora_capacitor_video_pin_booking"
+            eventName="video_pin_book_service"
             href={BOOKING_URL}
             className="rounded-full border border-white/30 px-6 py-3 text-center font-semibold text-white hover:bg-white/10"
           >
             Request service
-          </a>
+          </TrackedLink>
         </div>
       </section>
     </main>

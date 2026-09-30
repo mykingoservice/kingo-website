@@ -32,6 +32,9 @@ export const metadata: Metadata = {
     icon: "/kingo-favicon.png",
     apple: "/kingo-favicon.png",
   },
+  verification: {
+    google: "XYkM0HVoPEDowFotZ6v7xFxVavlOz4dVE87RT_OmzUM",
+  },
 };
 
 const primaryNav = [
