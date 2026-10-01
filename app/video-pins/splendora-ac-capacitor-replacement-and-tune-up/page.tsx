@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BOOKING_URL, PHONE_HREF } from "@/app/cta-links";
-import { GoogleAnalytics } from "@/app/connect/google-analytics";
 import { TrackedLink } from "@/app/connect/tracked-link";
 
 const videoId = "PI6QYkWjHmg";
@@ -14,12 +13,6 @@ const thumbnailUrl =
   "https://www.mykingoservice.com/images/video-pins/kingo-splendora-capacitor-thumbnail.jpg";
 const videoDescription =
   "Kingo Services Heating and Cooling field footage of outdoor AC capacitor replacement and tune-up work in Splendora, Texas.";
-const configuredMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
-const GA_MEASUREMENT_ID =
-  configuredMeasurementId && /^G-[A-Z0-9]+$/.test(configuredMeasurementId)
-    ? configuredMeasurementId
-    : undefined;
-
 const videoStructuredData = {
   "@context": "https://schema.org",
   "@type": "VideoObject",
@@ -54,7 +47,6 @@ export const metadata: Metadata = {
 export default function SplendoraCapacitorVideoPinPage() {
   return (
     <main className="mx-auto max-w-6xl px-6 py-16">
-      <GoogleAnalytics measurementId={GA_MEASUREMENT_ID} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(videoStructuredData) }}

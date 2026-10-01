@@ -29,8 +29,8 @@ declare global {
   interface Window {
     gtag?: (
       command: "event",
-      eventName: ConnectEventName,
-      parameters: { action_name: string },
+      eventName: string,
+      parameters: Record<string, string>,
     ) => void;
   }
 }

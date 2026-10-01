@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { PHONE_HREF } from "../cta-links";
-import { GoogleAnalytics } from "./google-analytics";
 import styles from "./page.module.css";
 import { TrackedLink, type ConnectEventName } from "./tracked-link";
 
@@ -62,13 +61,6 @@ const secondaryLinks = [
   actionName: string;
   external: boolean;
 }>;
-const configuredMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
-const GA_MEASUREMENT_ID =
-  configuredMeasurementId &&
-  /^G-[A-Z0-9]+$/.test(configuredMeasurementId)
-    ? configuredMeasurementId
-    : undefined;
-
 const serviceAreas = [
   "Splendora",
   "New Caney",
@@ -177,7 +169,6 @@ export const metadata: Metadata = {
 export default function ConnectPage() {
   return (
     <article className={styles.connectPage}>
-      <GoogleAnalytics measurementId={GA_MEASUREMENT_ID} />
       <div className={styles.shell}>
         <header className={styles.header}>
           <TrackedLink

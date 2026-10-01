@@ -4,8 +4,16 @@ import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
 import { BOOKING_URL, PHONE_HREF } from "./cta-links";
+import { GoogleAnalytics } from "./connect/google-analytics";
+import { LeadClickTracking } from "./lead-click-tracking";
 import { MobileMenu } from "../components/mobile-menu";
 import "./globals.css";
+
+const configuredMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+const GA_MEASUREMENT_ID =
+  configuredMeasurementId && /^G-[A-Z0-9]+$/.test(configuredMeasurementId)
+    ? configuredMeasurementId
+    : undefined;
 
 const inter = Inter({
   subsets: ["latin"],
@@ -202,6 +210,12 @@ export default function RootLayout({
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{ __html: pushEngageSdk }}
         />
+        {GA_MEASUREMENT_ID && (
+          <>
+            <GoogleAnalytics measurementId={GA_MEASUREMENT_ID} />
+            <LeadClickTracking />
+          </>
+        )}
       </body>
     </html>
   );

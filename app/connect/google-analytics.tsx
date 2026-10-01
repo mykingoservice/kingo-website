@@ -15,7 +15,7 @@ export function GoogleAnalytics({ measurementId }: GoogleAnalyticsProps) {
         src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
         strategy="afterInteractive"
       />
-      <Script id="connect-google-analytics" strategy="afterInteractive">
+      <Script id="kingo-google-analytics" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
