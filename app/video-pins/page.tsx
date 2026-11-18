@@ -27,6 +27,12 @@ export default function VideoPinsPage() {
       </p>
 
       <section className="mt-12 rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+        <p className="text-sm font-semibold uppercase tracking-widest text-slate-500">HVAC basics · 18 seconds</p>
+        <h2 className="mt-3 text-2xl font-bold text-slate-950">One indoor blower, two modes</h2>
+        <p className="mt-4 max-w-3xl text-slate-700">Follow the animated airflow through heating and cooling mode in a typical ducted furnace and central A/C system.</p>
+        <Link href="/video-pins/one-indoor-blower-two-modes/" className="mt-6 inline-block font-semibold underline">Watch the blower explanation</Link>
+      </section>
+      <section className="mt-12 rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
         <Image
           src="/images/video-pins/kingo-splendora-capacitor-thumbnail.jpg"
           alt="Kingo Services AC capacitor replacement video thumbnail for Splendora, Texas"
