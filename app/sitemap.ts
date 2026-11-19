@@ -52,6 +52,7 @@ const paths = [
   "/services/hvac-maintenance/",
   "/shorts/this-room-needed-more-air/",
   "/video-pins/",
+  "/video-pins/one-indoor-blower-two-modes/",
   "/video-pins/splendora-ac-capacitor-replacement-and-tune-up/",
 ];
 
