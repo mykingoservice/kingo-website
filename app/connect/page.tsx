@@ -41,7 +41,7 @@ const secondaryLinks = [
     external: true,
   },
   {
-    href: "https://www.tiktok.com/@kingoservices",
+    href: "https://www.tiktok.com/@mykingoservice",
     label: "TikTok",
     eventName: "connect_tiktok",
     actionName: "tiktok",
