@@ -76,6 +76,37 @@ export default function Page() {
         </div>
       </section>
 
+      <section className="home-section" aria-labelledby="leave-a-review">
+        <div className="section-heading">
+          <p className="eyebrow">Customer feedback</p>
+          <h2 id="leave-a-review">Share your Kingo experience</h2>
+          <p>
+            If we’ve worked with you, we welcome your honest feedback. Choose
+            whichever review site you prefer. One review is plenty.
+          </p>
+        </div>
+        <div className="hero-actions" style={{ flexWrap: "wrap" }}>
+          <a
+            className="home-button home-button-primary"
+            href="https://g.page/r/CUaufGQiE2vQEBM/review"
+          >
+            Review on Google
+          </a>
+          <a
+            className="home-button home-button-secondary"
+            href="https://www.trustpilot.com/evaluate/mykingoservice.com"
+          >
+            Review on Trustpilot
+          </a>
+          <a
+            className="home-button home-button-secondary"
+            href="mailto:email@mykingoservice.com"
+          >
+            Email Kingo privately
+          </a>
+        </div>
+      </section>
+
       <section className="home-section">
         <div className="section-heading">
           <p className="eyebrow">Pinned reviews</p>
