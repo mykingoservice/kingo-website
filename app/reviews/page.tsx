@@ -83,7 +83,7 @@ export default function Page() {
           <p>
             If we’ve worked with you, we welcome your honest feedback. Choose
             whichever review site you prefer. Already reviewed us on Google?
-            You’re welcome to share your experience on Trustpilot instead.
+            You’re welcome to share your experience on Trustpilot or Facebook instead.
             There’s no need to review us on Google again.
           </p>
         </div>
@@ -99,6 +99,12 @@ export default function Page() {
             href="https://www.trustpilot.com/evaluate/mykingoservice.com"
           >
             Review on Trustpilot
+          </a>
+          <a
+            className="home-button home-button-secondary"
+            href="https://www.facebook.com/mykingoservice/reviews/"
+          >
+            Review on Facebook
           </a>
           <a
             className="home-button home-button-secondary"
