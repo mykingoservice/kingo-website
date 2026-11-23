@@ -82,7 +82,9 @@ export default function Page() {
           <h2 id="leave-a-review">Share your Kingo experience</h2>
           <p>
             If we’ve worked with you, we welcome your honest feedback. Choose
-            whichever review site you prefer. One review is plenty.
+            whichever review site you prefer. Already reviewed us on Google?
+            You’re welcome to share your experience on Trustpilot instead.
+            There’s no need to review us on Google again.
           </p>
         </div>
         <div className="hero-actions" style={{ flexWrap: "wrap" }}>
